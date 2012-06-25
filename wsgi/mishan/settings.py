@@ -8,7 +8,7 @@ TEMPLATE_DEBUG = DEBUG
 FORCE_SCRIPT_NAME = ""
 
 if MODE == "PRODUCTION":
-    PATH_ROOT = "/var/lib/stickshift/59e1762e1e394aa8bdfabf7e09f9bdd8/fulledge/repo/wsgi"
+    PATH_ROOT = "/var/lib/stickshift/0e6de6785c1247cab0a6485bf73e657f/mishan/repo/wsgi"
 else:
     PATH_ROOT = os.getcwd()
 
@@ -25,8 +25,8 @@ if MODE == "PRODUCTION":
             'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
             'NAME': 'mishan',                      # Or path to database file if using sqlite3.
             'USER': 'admin',                      # Not used with sqlite3.
-            'PASSWORD': 'AhQ-evrIGTMB',                  # Not used with sqlite3.
-            'HOST': '127.7.56.1',                      # Set to empty string for localhost. Not used with sqlite3.
+            'PASSWORD': 'S2KHl2pekg19',                  # Not used with sqlite3.
+            'HOST': '127.7.153.1',                      # Set to empty string for localhost. Not used with sqlite3.
             'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
         }
     }
