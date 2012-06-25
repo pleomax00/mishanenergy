@@ -14,9 +14,6 @@ class GeneralMiddleware(object):
 
         request.MENU = settings.MENU
         request.SERVICES = settings.SERVICES
-        clients = os.listdir (os.path.join (settings.PATH_ROOT, "static", "clients"))
-        clients = filter ( lambda x: x.lower().endswith (".jpg"), clients)
-        request.clients = clients
         if request.user.is_authenticated():
             if request.user.email in settings.LINE_MANAGERS:
                 request.is_admin = True
