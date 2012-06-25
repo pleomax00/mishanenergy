@@ -1,0 +1,5 @@
+<ul class="servicemenu" style="display: none;" class="service_target">
+    {% for key in request.SERVICES %}
+    <li><a href="/service/{{key.0}}">{{key.1}}</a></li>
+    {% endfor %}
+</ul>

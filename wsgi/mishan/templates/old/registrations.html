@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+
+{% block title %}Webinar Registration Data{% endblock %}
+
+{% block maincontents %}
+    <div class="paddingbox cufon">
+        <ul class="padleft1">
+            {% for i in regs %}
+            <li>{{i.name}} ({{i.mobile}}, {{i.city}}, {{i.timestamp}})</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
