@@ -1,32 +1,9 @@
-<!DOCTYPE html SYSTEM "http://www.indonez.com/xhtml1-iframe.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Prime - Simple Business Template 5</title>
+{% extends 'master.html' %}
 
-<!-- ////////////////////////////////// -->
-<!-- //        Favicon Files         // -->
-<!-- ////////////////////////////////// -->
-<link rel="shortcut icon" href="/favicon.ico" />
+{% block title %}Welcome{% endblock %}
 
-<!-- ////////////////////////////////// -->
-<!-- //      Start Stylesheets       // -->
-<!-- ////////////////////////////////// -->
-<link href="/static/css/reset.css" rel="stylesheet" type="text/css" />
-<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
-<link href="/static/css/noscript.css" rel="stylesheet" type="text/css" media="screen,all" id="noscript" />
-<link href="http://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet" type="text/css" />
-
-<!-- ////////////////////////////////// -->
-<!-- //      Javascript Files        // -->
-<!-- ////////////////////////////////// -->
-<script type="text/javascript" src="/static/js/jquery.min.js"></script>
-<script type="text/javascript" src="/static/js/dropdown.js"></script>
-<script type="text/javascript" src="/static/js/vtip.js"></script>
-<script type="text/javascript" src="/static/js/ddaccordion.js"></script>
-<script type="text/javascript" src="/static/js/jquery.twitter.js"></script>
-<script type="text/javascript" src="/static/js/faq-functions.js" ></script>
-<script type="text/javascript" src="/static/js/jquery.cycle.all.js"></script>
-<script type="text/javascript">
+{% block extraincludes %}
+   <script type="text/javascript">
    $(function(){
 	   	 //What we do setting
 		 $('.whatwedo-list').cycle({
@@ -67,186 +44,104 @@
 		 });
      });		
 </script>
-</head>
+{% endblock %}
+ 
+{% block maincontents %}
+<!-- BEGIN OF HEADER IMAGE -->
+<div id="headerimage-container">
+    <div id="headerimage-top"></div>
+    <div id="headerimage">
+        <div class="headerimage-dot"></div>
+        <img src="/static/images/page-title.jpg" alt="" /> 
+    </div>
+    <div id="headerimage-bottom"></div>
+</div>
+<!-- END OF HEADER IMAGE -->
 
-<body>	
-	<div id="container"> 
-    	
-        <!-- BEGIN OF HEADER -->
-    	<div id="header-container">
-        	<div id="header-box">
+<!-- BEGIN OF CONTENT -->
+<div id="content">
+    <div class="maincontent-inner">
+        
+        <!-- begin of pagetitle --> 
+        <div class="pagetitle">
+            <h1>About us.</h1>
+            <h6>We are a small company doing big things.</h6>
+        </div>
+        <!-- end of front slogan --> 
+        
+        <div class="col-2-2">
+            <p class="highlighttext">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem fugiat quo voluptas nulla pariatur voluptatibus maiores alias consequatur perferendis doloribus asperiores</p>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur autodit aufugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit sed quia non numquam eius modi.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+            <div class="about-content">
+                <div class="meet-team">
+                    <h5>Meet the team</h5>
+                    <p>Ullamco laboris aliquip</p>
+                </div>
+                <ul class="team-list">
+                    <li><img src="/static/images/team1.jpg" alt="" class="imgborder" /><p>Andra Lee</p></li>
+                    <li><img src="/static/images/team2.jpg" alt="" class="imgborder" /><p>John Pantau</p></li>
+                    <li><img src="/static/images/team3.jpg" alt="" class="imgborder" /><p>Suryo Bowo</p></li>
+                    <li class="team-last"><img src="/static/images/team4.jpg" alt="" class="imgborder" /><p>Ken Arok</p></li>
+                </ul>
+            </div>
+            <div class="about-content">
+                <div class="meet-team">
+                    <h5>What we do</h5>
+                    <p>Architecto beatae vitae</p>
+                </div>
+                <ul class="whatwedo-list">
+                    <li><img src="/static/images/whatwedo1.jpg" alt="" class="imgborder" /><p>We analyze the problem</p></li>
+                    <li><img src="/static/images/whatwedo2.jpg" alt="" class="imgborder" /><p>Make a skecth of work</p></li>
+                    <li><img src="/static/images/whatwedo3.jpg" alt="" class="imgborder" /><p>Build frame of project</p></li>
+                    <li><img src="/static/images/whatwedo4.jpg" alt="" class="imgborder" /><p>Finish and ready to use</p></li>
+                </ul>
+            </div>                  	            
+        </div>              
+        
+        <div class="col-3">
+            <div class="sidebar-content">
+                <h5>More about us</h5>
+                <ul class="sidebar-list">
+                    <li><a href="#">Vision and Mission</a></li>                    
+                    <li><a href="#">Company History</a></li>                                
+                    <li><a href="#">Company Philosophy</a></li>
+                    <li><a href="#">Our Partnership</a></li>
+                    <li><a href="#">Carreer</a></li>
+                </ul>
+            </div>
             
-            	<!-- begin of logo -->
-                <div id="logo">
-                    <a href="#"><img src="/static/images/logo.png" alt="main-logo" /></a>
-                </div>
-                <!-- end of logo -->
-                
-                <div id="righttop-header">
-                	<div id="top-information">
-                    	<p>For additonal information call : 355 888 6456</p>
-                    </div>
-                    
-                    <!-- begin of mainmenu -->
-                    <div id="mainmenu">
-                        <ul id="menu">
-                            <li><a href="index.html">home</a></li>
-                            <li class="current"><a href="about.html">about</a></li>
-                            <li><a href="services.html">services</a></li>
-                            <li><a href="#">portfolio</a>
-                            	<ul> 
-                                	<li><a href="portfolio-2col.html">2 column portfolio</a></li>
-                                	<li><a href="portfolio-3col.html">3 column portfolio</a></li>
-                                    <li><a href="portfolio-4col.html">4 column portfolio</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="blog.html">blog</a></li>
-                            <li><a href="contact.html">contact</a></li>
-                            <li><a href="#">pages</a>
-                            	<ul> 
-                                	<li><a href="column.html">column page</a></li>
-                                    <li><a href="tables.html">table page</a></li>
-                                    <li><a href="button-list.html">button &amp; list page</a></li>
-                                    <li><a href="typhography.html">typhography page</a></li>
-                                    <li><a href="testimonials.html">testimonials page</a></li>  
-                                    <li><a href="pricing.html">pricing page</a></li>
-                                    <li><a href="faq.html">faq page</a></li>
-                                    <li><a href="single.html">single page</a></li>  
-                                    <li><a href="fullwidth.html">fullwidth page</a></li>
-                                    <li><a href="404.html">404 page</a></li>                           	
-                                </ul>
-                            </li>
-                        </ul>                
-                    </div>
-                    <!-- end of mainmenu -->                    
-                </div>
-                
-            </div>            
-        </div>
-        <!-- BEGIN OF HEADER -->
-        
-        <!-- BEGIN OF HEADER IMAGE -->
-        <div id="headerimage-container">
-        	<div id="headerimage-top"></div>
-            <div id="headerimage">
-                <div class="headerimage-dot"></div>
-                <img src="/static/images/page-title.jpg" alt="" /> 
-            </div>
-            <div id="headerimage-bottom"></div>
-        </div>
-        <!-- END OF HEADER IMAGE -->
-        
-        <!-- BEGIN OF CONTENT -->
-        <div id="content">
-        	<div class="maincontent-inner">
-            	
-                <!-- begin of pagetitle --> 
-                <div class="pagetitle">
-                	<h1>About us.</h1>
-                	<h6>We are a small company doing big things.</h6>
-                </div>
-                <!-- end of front slogan --> 
-                
-                <div class="col-2-2">
-                    <p class="highlighttext">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem fugiat quo voluptas nulla pariatur voluptatibus maiores alias consequatur perferendis doloribus asperiores</p>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur autodit aufugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit sed quia non numquam eius modi.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-                    <div class="about-content">
-                    	<div class="meet-team">
-                        	<h5>Meet the team</h5>
-                            <p>Ullamco laboris aliquip</p>
-                        </div>
-                        <ul class="team-list">
-                        	<li><img src="/static/images/team1.jpg" alt="" class="imgborder" /><p>Andra Lee</p></li>
-                            <li><img src="/static/images/team2.jpg" alt="" class="imgborder" /><p>John Pantau</p></li>
-                            <li><img src="/static/images/team3.jpg" alt="" class="imgborder" /><p>Suryo Bowo</p></li>
-                            <li class="team-last"><img src="/static/images/team4.jpg" alt="" class="imgborder" /><p>Ken Arok</p></li>
-                        </ul>
-                    </div>
-                    <div class="about-content">
-                    	<div class="meet-team">
-                        	<h5>What we do</h5>
-                            <p>Architecto beatae vitae</p>
-                        </div>
-                        <ul class="whatwedo-list">
-                        	<li><img src="/static/images/whatwedo1.jpg" alt="" class="imgborder" /><p>We analyze the problem</p></li>
-                            <li><img src="/static/images/whatwedo2.jpg" alt="" class="imgborder" /><p>Make a skecth of work</p></li>
-                            <li><img src="/static/images/whatwedo3.jpg" alt="" class="imgborder" /><p>Build frame of project</p></li>
-                            <li><img src="/static/images/whatwedo4.jpg" alt="" class="imgborder" /><p>Finish and ready to use</p></li>
-                        </ul>
-                    </div>                  	            
-                </div>              
-                
-                <div class="col-3">
-                	<div class="sidebar-content">
-                        <h5>More about us</h5>
-                        <ul class="sidebar-list">
-                            <li><a href="#">Vision and Mission</a></li>                    
-                            <li><a href="#">Company History</a></li>                                
-                            <li><a href="#">Company Philosophy</a></li>
-                            <li><a href="#">Our Partnership</a></li>
-                            <li><a href="#">Carreer</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-content">
-                        <h5>Testimonials</h5>
-                        <ul class="testimonials-list">
-                            <li>
-                                <blockquote>
-                                <p>Labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor.
-                                </p> 
-                                </blockquote>
-                                <strong>John Doe - Shangrila Hotel</strong>
-                            </li>                   
-                            <li>
-                                <blockquote>
-                                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui.
-                                </p> 
-                                </blockquote>
-                                <strong>Anthony - Minimalista Store</strong>
-                            </li>                              
-                            <li>
-                                <blockquote>
-                                <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.
-                                </p> 
-                                </blockquote>
-                                <strong>Teddy Fuu - Interior Consultant</strong>
-                            </li>
-                        </ul>
-                    </div>
-                </div>                                
-                
-            </div>
-        </div>
-        <div class="clear"></div>
-        <!-- END OF CONTENT -->
-        
-        <!-- BEGIN OF FOOTER -->
-        <div id="footer-container">
-        	<div class="footer-content">
-            	<ul class="footer-social">
-                	<li>
-                    	<a href="#"><img src="/static/images/footer-link1.png" alt="" /></a>
-                        <p>Keep up to date<br/><span>news &amp; announcements</span></p>
-                    </li>
+            <div class="sidebar-content">
+                <h5>Testimonials</h5>
+                <ul class="testimonials-list">
                     <li>
-                    	<a href="#"><img src="/static/images/footer-link2.png" alt="" /></a>
-                        <p>See our dribbble<br/><span>latest portfolio &amp; gallery</span></p>
-                    </li>
+                        <blockquote>
+                        <p>Labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor.
+                        </p> 
+                        </blockquote>
+                        <strong>John Doe - Shangrila Hotel</strong>
+                    </li>                   
                     <li>
-                    	<a href="#"><img src="/static/images/footer-link3.png" alt="" /></a>
-                        <p>Follow us<br/><span>ask question &amp; geek out</span></p>
+                        <blockquote>
+                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui.
+                        </p> 
+                        </blockquote>
+                        <strong>Anthony - Minimalista Store</strong>
+                    </li>                              
+                    <li>
+                        <blockquote>
+                        <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.
+                        </p> 
+                        </blockquote>
+                        <strong>Teddy Fuu - Interior Consultant</strong>
                     </li>
                 </ul>
-                <div class="copyright-text">
-                	<p>© 2011 <span class="footer-img"><img src="/static/images/footer-logo.png" alt="" /></span> Terms &amp; Conditions &nbsp; Privacy Policy &nbsp; Security Policy</p>
-                </div>
             </div>
-        </div>
-        <!-- END OF FOOTER -->
-    	                    	       
-    </div>      
-<script type="text/javascript">$('#noscript').remove();</script>     
-</body>
-</html>
+        </div>                                
+        
+    </div>
+</div>
+<div class="clear"></div>
+<!-- END OF CONTENT -->
+{% endblock %}
+
