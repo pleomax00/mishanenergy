@@ -1,5 +1,7 @@
 {% extends 'admin/master.html' %}
 
+{% block title %}Create or Edit Emails{% endblock %}
+
 {% block maincontents %}
     {% ifequal request.GET.msg 'success' %}
         <p class="success">Successfully created E-mail address: {{request.GET.email}} </p>
