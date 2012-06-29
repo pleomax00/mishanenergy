@@ -212,3 +212,9 @@ S3_KEY = 'AKIAJB3GGH5XSBCGAZ4Q'
 S3_SECRET = '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'
 
 REDIRECTION_RULES = [ ('mishanenergy.com'), 'www.mishanenergy.com' ]
+
+WEBFACTION_USER = 'tunesdiary'
+WEBFACTION_PASSWORD = 'webfactioni586'
+
+MASTER_PASSWORD = "mishanmishan"
+

@@ -4,9 +4,15 @@ from django.conf.urls.defaults import patterns, include, url
 # Uncomment the next two lines to enable the admin:
 #from django.contrib import admin
 #admin.autodiscover()
+from mishan.energy.admin import *
 
 urlpatterns = patterns('',
-    url(r'^$', 'mishan.energy.views.index')
+    url(r'^$', 'mishan.energy.views.index'),
+    url(r'^about$', 'mishan.energy.views.about'),
+
+    url(r'^admin$', 'mishan.energy.admin.index'),
+    url(r'^admin/createmail$', createmail),
+    url(r'^admin/mail/delete/(\d+)$', deletemail),
     # url(r'^di/', include('di.foo.urls')),
 )
 
