@@ -1,4 +1,0 @@
-h2. News & Events
-
-<br/><img src="/static/images/dynamic/newsnevents.jpg" class="leftimage" /> 
-
