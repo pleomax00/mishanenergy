@@ -1,0 +1,209 @@
+{% extends 'master.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block extraincludes %}
+<script type="text/javascript">
+   $(function(){
+        //Slideshow setting		   		
+        $('#slider').cycle({
+            timeout: 5000,  
+            fx:     'fade',
+            pager:   '#pager', 
+            cleartypeNoBg: true, 
+            pauseOnPagerHover: 0 
+         });
+         
+         //Featured logo setting
+         $('.featured-logo').cycle({
+            timeout: 5000,  
+            fx:     'fade',
+            cleartypeNoBg: true, 
+            pauseOnPagerHover: 0 
+         });
+         
+         //Tab jquery
+         $(".tab_content").hide(); 
+         $("ul.tabs li:first").addClass("active").show(); 
+         $(".tab_content:first").show(); 
+         $("ul.tabs li").click(function() {
+              $("ul.tabs li").removeClass("active");
+              $(this).addClass("active"); 
+              $(".tab_content").hide(); 
+              var activeTab = $(this).find("a").attr("href"); 
+              $(activeTab).fadeIn(); 
+              return false;
+         });
+     });		
+</script>
+{% endblock %}
+
+{% block maincontents %}
+<!-- BEGIN OF SLIDESHOW -->
+<div id="slideshow-container">
+    <div id="slide-top"></div>            
+    <ul id="slider">
+        <!-- begin of slide 1 -->
+        <li>
+        <div class="slide-content-wrapper">                            	
+            <div class="slide-content">                        
+                <div class="slide-text">
+                    <h1>Welcome home.</h1>
+                    <p>We help you build your dream home</p>
+                    <a class="button small green" href="#"><span>get a quote &nbsp;&raquo;</span></a>
+                </div>                                    
+            </div>
+            <div class="slide-dot"></div>
+        </div>
+        <img src="/static/images/slideshow/slide1.jpg" alt="" />
+        </li>
+        <!-- end of slide 1 -->
+        
+        <!-- begin of slide 2 -->
+        <li>
+        <div class="slide-content-wrapper">                            	
+            <div class="slide-content">                        
+                <div class="slide-text">
+                    <h1>Elegant &amp; modern.</h1>
+                    <p>We help you build your dream home</p>
+                    <a class="button small green" href="#"><span>get a quote &nbsp;&raquo;</span></a>
+                </div>                                    
+            </div>
+            <div class="slide-dot"></div>
+        </div>
+        <img src="/static/images/slideshow/slide2.jpg" alt="" />
+        </li>
+        <!-- end of slide 2 -->
+        
+        <!-- begin of slide 3 -->
+        <li>
+        <div class="slide-content-wrapper">                            	
+            <div class="slide-content">                        
+                <div class="slide-text">
+                    <h1>Feel the comfort.</h1>
+                    <p>We help you build your dream home</p>
+                    <a class="button small green" href="#"><span>get a quote &nbsp;&raquo;</span></a>
+                </div>                                    
+            </div>
+            <div class="slide-dot"></div>
+        </div>
+        <img src="/static/images/slideshow/slide3.jpg" alt="" />
+        </li>
+        <!-- end of slide 3 -->
+        
+        <!-- begin of slide 4 -->
+        <li>
+        <div class="slide-content-wrapper">                            	
+            <div class="slide-content">                        
+                <div class="slide-text">
+                    <h1>Minimal &amp; simple.</h1>
+                    <p>We help you build your dream home</p>
+                    <a class="button small green" href="#"><span>get a quote &nbsp;&raquo;</span></a>
+                </div>                                    
+            </div>
+            <div class="slide-dot"></div>
+        </div>
+        <img src="/static/images/slideshow/slide4.jpg" alt="" />
+        </li>  
+        <!-- end of slide 4 -->                      
+    </ul>
+    
+    <!-- only when javascript disable -->
+    <div id="slide-nojs"></div>
+    <div id="slidedot-nojs"></div>
+    <!-- only when javascript disable -->
+    
+    <div id="pager">&nbsp;</div>
+    <div id="slide-bottom"></div>
+</div>
+<!-- END OF SLIDESHOW -->
+
+<!-- BEGIN OF CONTENT -->
+<div id="content">
+    <div class="maincontent">
+        
+        <!-- begin of front slogan --> 
+        <div class="col-1 front-slogan">
+            <h3>Six steps to designing your interior</h3>
+            <p>"Once you've design you interior, it quickly becomes apparent how well-designed Prime is. There is almost no learning curve to the expert."</p>
+            <div class="clear"></div>
+            <div class="divider"></div>
+        </div>
+        <!-- end of front slogan --> 
+        
+        <!-- begin of left content --> 
+        <div class="col-2-2">
+            <img src="/static/images/img-content1.png" alt="" class="imgleft" />
+            <h5>Build your dream interior with Us</h5>
+            <p>Sedut perspiciatis unde omnis istenatus error voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae abillo inventore veritatis quasi architecto beatae dicta explicabo temo enim ipsam voluptatem quia</p>
+            <div class="front-box">
+                <div class="front-badge">
+                    <img src="/static/images/deal-badge.png" alt="" />
+                </div>
+                <div class="front-logo">
+                    <p>featured on :</p>
+                    <ul class="featured-logo">
+                        <li><img src="/static/images/front-logo1.png" alt="" /></li>
+                        <li class="featured-nojs"><img src="/static/images/front-logo2.png" alt="" /></li>
+                        <li class="featured-nojs"><img src="/static/images/front-logo3.png" alt="" /></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="front-box-shadow"></div>
+        </div> 
+        <!-- end of left content -->              
+        
+        <!-- begin of latest news --> 
+        <div class="col-3">
+            <h5>Latest news</h5>
+            <ul class="latest-list">
+                <li>
+                    <div class="date-news">
+                        16<br/>Nov
+                    </div>
+                    <p><a href="#">Excepteur sint occaecat cupidatat non proident sunt in culpa officia </a></p>                        
+                </li> 
+                <li>
+                    <div class="date-news">
+                        16<br/>Nov
+                    </div>
+                    <p><a href="#">Excepteur sint occaecat cupidatat non proident sunt in culpa officia </a></p>                        
+                </li>
+                <li>
+                    <div class="date-news">
+                        16<br/>Nov
+                    </div>
+                    <p><a href="#">Excepteur sint occaecat cupidatat non proident sunt in culpa officia </a></p>                        
+                </li>                                               
+            </ul>
+        </div>
+         <!-- end of latest news -->
+        
+        <!-- begin of three column content --> 
+        <div class="col-1 front-column">
+            <div class="col-3-front">
+                <h5>Basic  sketching</h5>
+                <img src="/static/images/img-content2.jpg" alt="" class="imgleft imgborder" />
+                <p>Excepteur occaecater cupidatat exon proident sunter am culpa officia deserunt mollit anim est laborum suscipit laboriosamnisi</p>
+            </div>
+            
+            <div class="col-3-front">
+                <h5>Designing the frame</h5>
+                <img src="/static/images/img-content3.jpg" alt="" class="imgleft imgborder" />
+                <p>Excepteur occaecater cupidatat exon proident sunter am culpa officia deserunt mollit anim est laborum suscipit laboriosamnisi</p>
+            </div>
+            
+            <div class="col-3-front-last">
+                <h5>The final result</h5>
+                <img src="/static/images/img-content4.jpg" alt="" class="imgleft imgborder" />
+                <p>Excepteur occaecater cupidatat exon proident sunter am culpa officia deserunt mollit anim est laborum suscipit laboriosamnisi</p>
+            </div> 
+        </div>
+        <!-- end of three column content -->                      
+        
+    </div>
+</div>
+<div class="clear"></div>
+<!-- END OF CONTENT -->
+
+{% endblock %}

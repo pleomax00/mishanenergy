@@ -1,0 +1,42 @@
+{% extends "master.html" %}
+{% load core_tags %}
+
+{% block title %}Blog{% endblock %}
+
+{% block maincontents %}
+
+    {% include "rightbar.html" %}
+
+    <!-- Begin left block -->
+    <div class="leftblock">
+            {% for blog in this_page.object_list %}
+            <div class="makeblog{% if not forloop.last %} hr{% endif %}">
+                <h2 class="blogtitle"><a href="/blog/{{blog.catagory}}/{{blog.seoid}}">{{blog.title}}</a></h2>
+                <div class="timestamp">{{blog.timestamp}} by {{blog.author.get_full_name}} {% if request.user.is_authenticated %}(<a href="/admin/blogpost?edit={{blog.id}}">edit</a>){% endif %}</div>
+                <div class="blogpost textile">{{blog.post|totextile}}</div>
+                <p class="blogcatagory" id="preview_catagory">Tags: {{blog.tags}}</p>
+                <p class="mediatags" id="preview_tags">Posted in: {{blog.catagory}}</p>
+            </div>
+            {% endfor %}
+        </ul>
+
+        {% if pages.num_pages > 1 %}
+        <div class="pagelinks">
+            {% if this_page.has_previous %}
+                    <a href="/blog?page={{this_page.previous_page_number}}">&lt;&lt;previous</a>
+            {% endif %}
+            {% for i in pages.page_range %}
+                {% ifequal this_page.number i %}
+                    <span class="number">{{i}}</span>
+                {% else %}
+                    <a href="/blog?page={{i}}" class="number">{{i}}</a>
+                {% endifequal %}
+            {% endfor %}
+            {% if this_page.has_next %}
+                    <a href="/blog?page={{this_page.next_page_number}}">next&gt;&gt;</a>
+            {% endif %}
+        </div>
+        {% endif %}
+   </div>  <!-- End left block -->
+{% endblock %}
+

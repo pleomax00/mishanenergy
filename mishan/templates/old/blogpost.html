@@ -1,0 +1,71 @@
+{% extends "master.html" %}
+
+{% block title %}Admin Action List{% endblock %}
+
+{% block extraincludes %}
+<style type="text/css">
+    #id_catagory_parent {
+        width: 90% ! important;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready ( function() {
+        $("#id_title").keyup ( function () {
+            $("#preview_title").html ($(this).val());
+        });
+        $("#id_catagory").keyup ( function () {
+            $("#preview_catagory").html ("Posted in: " + $(this).val());
+        });
+        $("#id_tags").keyup ( function () {
+            $("#preview_tags").html ("Tags: " + $(this).val());
+        });
+        if (xhr) {
+            xhr.abort();
+        }
+        var xhr = $("#id_post").keyup ( function () {
+            $.ajax ( { 
+                context: this,
+                url: "/ac/post",
+                data: {text: $("#id_post").val()},
+                type: "POST",
+                success: function (data) {
+                    $("#preview_post").html (data);
+                },
+                error: function () {}
+            });
+        });
+        $("#id_title").trigger ( "keyup" );
+        $("#id_catagory").trigger ( "keyup" );
+        $("#id_post").trigger ( "keyup" );
+        $("#id_tags").trigger ( "keyup" );
+    });
+</script>
+
+{% endblock %}
+
+{% block maincontents %}
+    <form method="post" class="goaloof">
+        {% if editing %}
+        <input type="hidden" name="bid" value="{{editing}}" />
+        {% else %}
+        <input type="hidden" name="bid" value="{{b.id}}" />
+        {% endif %}
+        <table border="0">
+            {{blogform.as_table}}
+            <tr>
+                <td></td><td> <input type="submit" value="Save!" /></td>
+            </tr>
+        </table>
+    </form>
+    {% if saved %}
+        <div class="success">Changes Saved! <a href="/blog/{{b.catagory}}/{{b.seoid}}" target="_blank">View the blog</a></div>
+    {% endif %}
+    <div class="paddingbox">
+        <h2 class="blogtitle" id="preview_title"></h2>
+        <div class="byline">Posted by: {{request.user.get_full_name}} at: now</div>
+        <div class="blogpost textile" id="preview_post"></div>
+        <p class="blogcatagory" id="preview_catagory"></p>
+        <p class="mediatags" id="preview_tags"></p>
+    </div>
+{% endblock %}
+

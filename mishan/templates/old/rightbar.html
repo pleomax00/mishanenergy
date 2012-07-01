@@ -1,0 +1,55 @@
+    <!-- Begin right block -->
+    <div class="rightblock">
+
+        <div class="fbsidebar">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://www.facebook.com/Socializing4u" data-send="false" data-width="240" data-show-faces="true" data-font="merriwether"></div>
+        </div>
+
+        <!-- Social presence block -->
+        <div class="socialpresence">
+            <a href="http://www.facebook.com/fulledgesoftwares" target="_blank"><img src='/static/images/social/facebook.png' /></a>
+            <a href="www.twitter.com/fulledgesoftwares" target="_blank"><img src='/static/images/social/twitter.png' /></a>
+            <a href="http://plus.google.com/u/0/102578297271887070758/posts" target="_blank"><img src='/static/images/social/google.png' /></a>
+            <a href="http://www.linkedin.com/groups/" target="_blank"><img src='/static/images/social/linkedin.png' /></a>
+            <a href="http://www.facebook.com/Socializing4u" target="_blank"><img src='/static/images/social/rss.png' /></a>
+        </div>  <!-- End social presence block -->
+        
+        {% comment %}
+        <!-- Being registration -->
+        <div class="regwebminar">
+            <form action="form/webinar", method="post">
+                <p class="grow1 padtop1 padbottom1 cufon">Register for a free webinar</p>
+                <div><input class="textinput fullwidth" type="text" value="" name="name" title="Name..." /></div>
+                <div><input class="textinput fullwidth" type="text" value="" name="city" title="City..." /></div>
+                <div><input class="textinput fullwidth" type="text" value="" name="email" title="Email..." /></div>
+                <div><input class="textinput fullwidth" type="text" value="" name="cell" title="Mobile number..." /></div>
+                <div><input type="submit" value="Register" /> <span class="webinar_spinner"></span></div>
+                <div class="webinar_message"></div>
+            </form>
+        </div>  <!-- End registration -->
+        {% endcomment %}
+
+        <!-- Clients -->
+        <div class="clients regwebminar">
+        <h2 class="cufon righth">Our Clients</h2>
+            <ul class="imgshow">
+                {% for c in request.clients %}
+                    {% ifequal forloop.counter 1 %} <li class="active"><img src="/static/clients/{{c}}" /></li>
+                    {% else %} <li><img src="/static/clients/{{c}}" /></li> {% endifequal %}
+                {% endfor %}
+            </ul>
+        </div>  <!-- End clients -->
+ 
+        <!-- Twitter timeline -->
+        <div class="padtop1">
+            <h2 class="cufon righth">Twitter</h2>
+            <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+            <script>
+            new TWTR.Widget({ version: 2, type: 'profile', rpp: 10, interval: 30000, width: 'auto', height: 200, theme: { shell: { background: '#6babf9', color: '#fff' }, tweets: { background: '#fafafa', color: '#1a1a1a', links: '6babf9' } }, features: { scrollbar: true, loop: false, live: true, behavior: 'all' } }).render().setUser('digisalts').start();
+            </script>
+        </div>  <!-- End twitter timeline -->
+        
+
+    </div>  <!-- End right block -->
+

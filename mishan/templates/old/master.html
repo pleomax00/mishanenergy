@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title> {% block title %}{% endblock %} | Nimmo</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+
+        <!--link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" /-->
+      
+        <style type="text/css"> @import '/static/css/style.css'; </style>
+        <link rel='stylesheet' id='style-css'  href='/static/css/diapo.css' type='text/css' media='all'> 
+
+        <script type="text/javascript" src='/static/js/jquery.js'></script>
+        <script type="text/javascript" src='/static/js/neweffects.js'></script>
+        <script type="text/javascript" src='/static/js/effects.js'></script>
+        <script type="text/javascript" src='/static/js/cufon-yui.js'></script>
+        <script type="text/javascript" src='/static/js/mymerriweather.font.js'></script>
+        <script type='text/javascript' src='/static/js/jquery.easing.1.3.js'></script>
+        <script type='text/javascript' src='/static/js/jquery.hoverIntent.minified.js'></script> 
+        <script type='text/javascript' src='/static/js/diapo.js'></script> 
+
+        {% block extraincludes %}{% endblock %}
+    </head>
+
+    <body>
+        <!-- Header begins -->
+        <div class="header">
+           <!-- Inheader begins -->
+           <div class="inheader">
+                <a href='/' class="logo"><img src="/static/images/fulledge-logo.png" /></a>
+
+
+                {% comment %}
+                <!--div class="searcharea">
+                    <form method="post" class="search" autocomplete="off">
+                        <input type="text" name="q" class="searchbox textinput" title="Search..." />
+                        <input type="hidden" name="type" value="music" id="searchtype" />
+                        <input type="image" src="/static/images/searchicon.gif" class="stool" />
+                    </form>
+                    <div class="right padtop1">
+                        {% if request.user.is_authenticated %}
+                            Welcome {{request.user.get_full_name}} (<a href='/auth/logout'>logout</a>)
+                        {% endif %}
+                    </div>
+                </div-->
+                {% endcomment %}
+
+           </div>   <!-- Inheader ends -->
+        </div>  <!-- Header ends -->
+
+        <!-- Main contents begins -->
+        <div class="maincontents">
+            <!-- Navigation links begins -->
+            <ul class="navlinks">
+                {% for key in request.MENU %}
+                    {% if key.0 == pagename %}
+
+                        {% ifequal key.0 "services" %}
+                        <li class="selected dropper" droptarget="servicemenu"><a class="cufon" href='javascript:;'>{{key.1}}</a>
+                            {% include "menu/services.html" %}
+                        </li>
+                        {% else %}
+                        <li class="selected"><a class="cufon" href='/{{key.0}}'>{{key.1}}</a>
+                            {% include "menu/services.html" %}
+                        </li>
+                        {% endifequal %}
+
+                    {% else %}
+                        {% ifequal key.0 "services" %}
+                        <li class="dropper" droptarget="servicemenu"><a href='javascript:;' class="cufon">{{key.1}}</a>
+                            {% include "menu/services.html" %}
+                        </li>
+                        {% else %}
+                        <li><a href='/{{key.0}}' class="cufon">{{key.1}}</a>
+                            {% include "menu/services.html" %}
+                        </li>
+                        {% endifequal %}
+                    {% endif %}
+                {% endfor %}
+            </ul>   <!-- End navigation links -->
+
+            <div class="tabcontents">
+                {% block maincontents %}{% endblock %}
+            </div>
+
+        </div>  <!-- Main contents ends -->
+
+        <!-- Footer begins -->
+        <div class="footer cufon">
+            <p class="right"><a href='/info/termsofservice'>Terms of service</a> | <a href='/info/privacy'>Privacy Policy</a> </p>
+            <p class="left">Copyright (c) 2011, All rights reserved.</p>
+        </div>  <!-- Footer ends -->
+    </body>
+</html>
