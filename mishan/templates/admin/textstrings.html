@@ -1,0 +1,32 @@
+{% extends 'admin/master.html' %}
+{% load core_tags %}
+
+{% block maincontents %}
+    <table style="width: 100%;">
+    {% for file in files %}
+        <tr>
+            <td class="textname">{{file|fileslug}}</td>
+            <td><textarea name="{{file}}" class="editstring">{{file|fileslug|snippet}}</textarea></td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    <h2> Or create a new key.. </h2>
+    <form action="/admin/settextval" method="post">
+        <input type="hidden" value="/admin/textstrings" name="next" />
+        <table>
+            <tr>
+                <td>Key: </td>
+                <td> <input type="text" name="file" /></td>
+            </tr>
+            <tr>
+                <td>Value: </td>
+                <td> <textarea name="value" class="eeditstring"></textarea> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Save" /></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

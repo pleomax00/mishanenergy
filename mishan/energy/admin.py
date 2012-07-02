@@ -125,3 +125,20 @@ def changepassword (request):
         return HttpResponseRedirect ('/admin/changepassword?msg=success')
 
     return render_to_response ("admin/changepassword.html", locals())
+
+
+def textstrings (request):
+    """ Change web sites text strings """
+    textpath = os.path.join (settings.MARK_DOWN, "static")
+    files = filter (lambda x: x.endswith ('.txt'), os.listdir (textpath))
+    return render_to_response ("admin/textstrings.html", locals())
+
+def settextstring (request):
+    """ Save a file """
+    textpath = os.path.join (settings.MARK_DOWN, "static", request.POST.get ('file'))
+    if not textpath.endswith (".txt"):
+        textpath += ".txt"
+    file (textpath, "w").write (request.POST.get ('value'))
+    if request.POST.has_key ("next"):
+        return HttpResponseRedirect (request.POST.get ("next"))
+    return HttpResponse ("{}")
