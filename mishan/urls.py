@@ -16,6 +16,8 @@ urlpatterns = patterns('',
     url(r'^admin/mail/delete/(\d+)$', deletemail),
     url(r'^admin/textstrings$', textstrings),
     url(r'^admin/settextval$', settextstring),
+    url(r'^admin/news$', editnews),
+    url(r'^admin/removenews/(\d+)$', removenews),
     # url(r'^di/', include('di.foo.urls')),
 )
 

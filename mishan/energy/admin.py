@@ -5,7 +5,13 @@ from django.db.models import *
 from django.contrib.auth.models import User
 from django.contrib.auth.models import check_password
 from django.conf import settings
+from django.forms.extras.widgets import SelectDateWidget
 import xmlrpclib
+from mishan.energy.models import *
+
+class NewsForm (forms.Form):
+    news_text = forms.CharField (label = "News Text", max_length = 100, widget=forms.Textarea)
+    date = forms.DateField(initial=datetime.date.today, widget=SelectDateWidget())
 
 class EmailRegForm (forms.Form):
     full_name = forms.CharField (label = "Full Name", max_length = 30)
@@ -142,3 +148,27 @@ def settextstring (request):
     if request.POST.has_key ("next"):
         return HttpResponseRedirect (request.POST.get ("next"))
     return HttpResponse ("{}")
+
+
+def editnews (request):
+    """ News editor """
+    if request.method == "POST":
+        nform = NewsForm (request.POST)
+        if nform.is_valid ():
+            news = nform.cleaned_data.get ("news_text")
+            when = nform.cleaned_data.get ("date")
+            n = News (news = news, date = when)
+            n.save ()
+            nform = NewsForm ()
+    else:
+        nform = NewsForm ()
+
+    newss = News.objects.all ()
+    return render_to_response ("admin/newsedit.html", locals ())
+
+
+def removenews (request, iid):
+    """ Remove a news """
+    n = News.objects.get (id = iid)
+    n.delete ()
+    return HttpResponseRedirect ("/admin/news?action=removed")

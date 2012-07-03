@@ -163,24 +163,14 @@
         <div class="col-3">
             <h5>Latest news</h5>
             <ul class="latest-list">
+                {% for n in news %}
                 <li>
                     <div class="date-news">
-                        16<br/>Nov
+                        {{n.date.day}}<br/>{{n.date|date:"M"}}
                     </div>
-                    <p><a href="#">Excepteur sint occaecat cupidatat non proident sunt in culpa officia </a></p>                        
+                    <p>{{n.news}}</p>
                 </li> 
-                <li>
-                    <div class="date-news">
-                        16<br/>Nov
-                    </div>
-                    <p><a href="#">Excepteur sint occaecat cupidatat non proident sunt in culpa officia </a></p>                        
-                </li>
-                <li>
-                    <div class="date-news">
-                        16<br/>Nov
-                    </div>
-                    <p><a href="#">Excepteur sint occaecat cupidatat non proident sunt in culpa officia </a></p>                        
-                </li>                                               
+                {% endfor %}
             </ul>
         </div>
          <!-- end of latest news -->

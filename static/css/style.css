@@ -897,6 +897,9 @@ ul.featured-logo li{
 	width:296px;
 	margin:3px 0px 15px 0px;
 	float:left;
+    height: 250px;
+    overflow: auto;
+    overflow-x: hidden;
 }
 ul.latest-list li{
 	width:296px;

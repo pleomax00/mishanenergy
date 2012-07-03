@@ -1,0 +1,22 @@
+{% extends 'admin/master.html' %}
+
+{% block maincontents %}
+    <form method="post">
+        <table border="0">
+            {{nform.as_table}}
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Save" /></td>
+            </tr>
+        </table>
+
+        <h2>All News</h2>
+        <ul>
+            {% for n in newss %}
+            <li>{{n.news}} (<a href='/admin/removenews/{{n.id}}'>remove</a>)</li>
+            {% endfor %}
+        </ul>
+
+    </form>
+{% endblock %}
