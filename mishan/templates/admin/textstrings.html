@@ -6,7 +6,7 @@
     {% for file in files %}
         <tr>
             <td class="textname">{{file|fileslug}}</td>
-            <td><textarea name="{{file}}" class="editstring">{{file|fileslug|snippet}}</textarea></td>
+            <td><textarea name="{{file}}" class="editstring">{{file|fileslug|nobrsnippet}}</textarea></td>
         </tr>
     {% endfor %}
     </table>

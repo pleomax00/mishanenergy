@@ -22,8 +22,21 @@ def snippet (name):
     contents = f.read ()
     #reply = textile.textile(contents)
     contents = contents.replace ("\n","<br/>")
-    print contents
     return mark_safe (contents)
+
+
+@register.filter
+def nobrsnippet (name):
+    """ Load a textile snippet """
+    try:
+        f = file ( os.path.join (settings.MARK_DOWN, "%s.txt" % (name)), "r" )
+    except IOError:
+        return name
+    contents = f.read ()
+    #reply = textile.textile(contents)
+    #contents = contents.replace ("\n","<br/>")
+    return mark_safe (contents)
+
 
 
 @register.filter
