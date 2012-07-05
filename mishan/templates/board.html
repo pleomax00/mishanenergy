@@ -5,7 +5,7 @@
 
 {% block aboutustitle %}
         <div class="pagetitle">
-            <h1>{{"directors_head"|snippet}}</h1>
+            <h1>{{"directors_head"|snippet}} {% if member %}{{membername}}{% endif %}</h1>
 
         </div>
 {% endblock %}
