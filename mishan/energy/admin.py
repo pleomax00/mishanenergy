@@ -48,11 +48,11 @@ class EmailRegForm (forms.Form):
         return email
 
 
-@login_required
+#@login_required
 def index (request):
     """ serves /admin """
-    if request.email not in settings.LINE_MANAGERS:
-        raise Http404
+#    if request.email not in settings.LINE_MANAGERS:
+#        raise Http404
     return render_to_response ("admin/index.html", locals())
 
 
