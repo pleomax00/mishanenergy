@@ -607,7 +607,7 @@ p#vtip{
 /* MAINMENU
 ------------------------------------------------------*/
 #mainmenu{
-	width:711px;
+	width:760px;
 	margin:34px 0px 0px 0px;
 	float:right;
 }
@@ -641,11 +641,10 @@ p#vtip{
 	color:#ffffff;
 	text-decoration:none;
 	border-bottom:none;
-	width:105px;
+	/*width:105px;*/
 }
 #mainmenu ul li li a{
 	display:block;
-	float:left;
 }
 #mainmenu ul li a:hover{
 	text-decoration:none;
@@ -663,14 +662,16 @@ p#vtip{
 	padding:0px !important;
 	position:relative;
 	z-index:100;
-	line-height:20px !important
+	line-height:20px !important;
+    float: none !important;
+    display: block;
 }
 #menu ul{
 	display:none;
 	position:absolute;
 	top:44px;
 	left:8px;
-	width:139px;
+	width:200px;
 	padding:2px 0px 7px 4px!important;
 	border-top:4px solid #a2c437;
 	-webkit-border-radius: 0px;
@@ -681,7 +682,7 @@ p#vtip{
 	top:0px; left:139px;
 }
 #menu li ul a, #menu li ul a:visited{
-	width:115px;
+	/*width:115px;*/
 	padding:3px 10px;
 	font-size:13px;
 	font-weight:bold;
@@ -2573,3 +2574,7 @@ label{
 	clear:both;
 	display:block;
 } 
+
+.darr {
+    font-size: 10px;
+}
