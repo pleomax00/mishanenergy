@@ -76,7 +76,7 @@ def createmail (request):
             os.system ("sudo useradd %s" %(emailname))
             os.system ("echo '%s:%s' | sudo chpasswd" % (emailname, password))
             os.system ("sudo mkdir /home/%s" %(emailname))
-            os.system ("sudo chown -R /home/%s" %(emailname))
+            os.system ("sudo chown -R %s:%s /home/%s" %(emailname, emailname, emailname))
             #response = server.create_mailbox (session_id, emailname, False)
             #resp = server.create_email (session_id, email, emailname)
 
