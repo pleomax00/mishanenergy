@@ -104,7 +104,7 @@ def deletemail (request, iid):
     email = u.email
     emailname = email.split ("@")[0]
     os.system ("sudo userdel %s" %(emailname))
-    os.system ("sudo mv /home/%s /home/ubuntu/backup/delusers", % (emailname))
+    os.system ("sudo mv /home/%s /home/ubuntu/backup/delusers" % (emailname))
 
     u.delete()
     return HttpResponseRedirect ('/admin/createmail?msg=deleted&email=' + email)
