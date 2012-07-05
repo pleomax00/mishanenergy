@@ -1,0 +1,150 @@
+{% extends 'master.html' %}
+{% load core_tags %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block extraincludes %}
+<script type="text/javascript" src="/static/js/jquery.gmap-1.1.0-min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyAqczQNk8RA1OW8dkogZNJhjK5PGPtkY9Y"></script>
+<script type="text/javascript">
+   $(function(){ 
+   		//Twitter Jquery Setting
+		$("#twitter").getTwitter({
+			userName: "shamail",
+			numTweets: 2,
+			loaderText: "Loading tweets...",
+			slideIn: true,
+			slideDuration: 750
+		});	
+		
+		//Tab jquery
+		 $(".tab_content").hide(); 
+		 $("ul.tabs li:first").addClass("active").show(); 
+		 $(".tab_content:first").show(); 
+		 $("ul.tabs li").click(function() {
+			  $("ul.tabs li").removeClass("active");
+		 	  $(this).addClass("active"); 
+			  $(".tab_content").hide(); 
+			  var activeTab = $(this).find("a").attr("href"); 
+			  $(activeTab).fadeIn(); 
+			  return false;
+		 });
+   					
+		//Map Jquery	
+		$("#map").gMap({ controls: false,
+                  scrollwheel: false,
+                  markers: [{ latitude: -6.229555086277892,
+                              longitude: 106.82551860809326 }],
+                  icon: { image: "/static/images/map-marker.png", 
+                          iconsize: [85, 95],
+                          iconanchor: [12, 46],
+                          infowindowanchor: [12, 0] },
+                  latitude: -6.230179,
+                  longitude: 106.825218,
+                  zoom: 15 });		
+     });
+</script>
+{% endblock %}
+
+{% block maincontents %}
+        <!-- BEGIN OF HEADER IMAGE -->
+        <div id="headerimage-container">
+        	<div id="headerimage-top"></div>
+            <div id="headerimage">
+                <div class="headerimage-dot"></div>
+                <img src="/static/images/page-title3.jpg" alt="" /> 
+            </div>
+            <div id="headerimage-bottom"></div>
+        </div>
+        <!-- END OF HEADER IMAGE -->
+        
+        <!-- BEGIN OF CONTENT -->
+        <div id="content">
+        	<div class="maincontent-inner">
+            	
+                <!-- begin of pagetitle --> 
+                <div class="pagetitle">
+                	<h1>Contact us.</h1>
+                	<h6>{{"contactusdesc"|snippet}}</h6>
+                </div>
+                <!-- end of front slogan --> 
+                
+                <div class="col-2-2">
+                    <div id="map-box">
+                        <div id="map"></div>
+                    </div>
+                    <div class="about-content">
+                    	<div class="meet-team">
+                        	<h5>Our address</h5>
+                            <p>{{"addressdesc"|snippet}}</p>
+                        </div>
+                        <ul class="address-list">
+                            <li><p>{{"addressdesc"|snippet}}</p>                                
+                            </li>
+                            <li class="address-last">
+                            	<p>Email : {{"contactemail"|snippet}}<br/>
+                                Phone : {{"phone1"|snippet}}<br/>
+                       			Fax : {{"fax1"|snippet}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-content">
+                    	<div class="meet-team">
+                        	<h5>Contact form</h5>
+                            <p>{{"contactformdesc"|snippet}}</p>
+                        </div>
+                        <div class="contact-area">
+                        	<p>{{"contactformtext"|snippet}}</p>
+                            <div id="contactFormArea">
+                                <!-- Contact Form Start //-->
+                                <form id="contactform" method="post"> 
+                                    <fieldset>
+                                    <label>Name</label>
+                                    <input type="text" name="name" class="textfield" id="name" value="" />
+                                    <div class="clear"></div>
+                                    <label>E-mail</label>
+                                    <input type="text" name="email" class="textfield" id="email" value="" />
+                                    <div class="clear"></div>
+                                    <label>Subject</label>
+                                    <input type="text" name="subject" class="textfield" id="subject" value="" />
+                                    <div class="clear"></div>    
+                                    <label>Message</label>
+                                    <textarea name="message" id="message" class="textarea" cols="2" rows="4"></textarea>
+                                    <div class="clear"></div> 
+                                    <label>&nbsp;</label>
+                                    <input type="submit" name="submit" class="buttoncontact" id="buttonsend" value="Submit" />
+                                    <span class="loading" style="display: none;">Please wait..</span>
+                                    <div class="clear"></div>
+                                    </fieldset> 
+                                </form>
+                                <!-- Contact Form End //--> 
+                            </div>                            
+                        </div>
+                    </div>  	            
+                </div>              
+                
+                <div class="col-3">
+                 	<div class="sidebar-content twitter-bg">
+                        <h5>Tweet..!!</h5>
+                        <div id="twitter"></div>
+                    </div> 
+                    
+                    <div class="sidebar-content">
+                    	<h5>Get connected</h5>
+                        <ul class="social-list">
+                            <li><a href="#" title="google+" class="vtip"><img src="/static/images/social-icons/google-plus-black.png" alt="" /></a></li>
+                            <li><a href="#" title="behance" class="vtip"><img src="/static/images/social-icons/behance.png" alt="" /></a></li>
+                            <li><a href="#" title="dribbble" class="vtip"><img src="/static/images/social-icons/dribbble.png" alt="" /></a></li>
+                            <li><a href="#" title="linkedin" class="vtip"><img src="/static/images/social-icons/linkedin.png" alt="" /></a></li>
+                            <li><a href="#" title="flickr" class="vtip"><img src="/static/images/social-icons/flickr.png" alt="" /></a></li>
+                            <li><a href="#" title="lastfm" class="vtip"><img src="/static/images/social-icons/lastfm.png" alt="" /></a></li>
+                        </ul>
+                    </div>               
+                </div>                                
+                
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- END OF CONTENT -->
+        
+{% endblock %}

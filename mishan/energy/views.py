@@ -1,6 +1,7 @@
 from django.http import *
 from django.shortcuts import render_to_response
 from mishan.energy.models import *
+from django.core.mail import send_mail
 
 def slug (string):
     return "_".join (re.findall ("\w+", string)).lower ()
@@ -28,7 +29,6 @@ def about (request, pagename = "about"):
     """ Serves /about of the home page """
     if pagename == "board":
         board = get_board (True)
-        print board
     return render_to_response ( "%s.html" %(pagename), locals() )
 
 def board (request, member = ""):
@@ -38,4 +38,31 @@ def board (request, member = ""):
     membername = dictboard[member]
     return render_to_response ( "board.html", locals() )
 
+def services (request):
+    """ Serves /services of the site """
+    return render_to_response ( "services.html", locals() )
+
+def contact (request):
+    """ Serves /contact of the site """
+    if request.method == "POST":
+        message = request.POST.get ("message", "Blank Message")
+        subject = request.POST.get ("subject", "Empty Subject")
+        email = request.POST.get ("email", "no_email_provided")
+        name = request.POST.get ("name", "Unknown")
+
+        textual = """%s filled contact form on mishanenergy.com\nEmail: %s\nMessage: %s\n\nThanks,\nMishanEnergy Admin """ % (name, email, message)
+        to = settings.LINE_MANAGERS
+        from_email = '"MishanEnergy Admin" <support@mishanenergy.com>' 
+        send_mail ( "[Contact Us Filled] %s" %(subject), textual, from_email, to, fail_silently=False )
+
+    return render_to_response ( "contact.html", locals() )
+
+def genericpage (request, page):
+    """ Serves a generic page """
+    title = page.capitalize ()
+    titlename = page+"_h2"
+    titledesc = page+"_minidesc"
+    pagetext = page+"_text"
+    image = page+"_head"
+    return render_to_response ( "genericpage.html", locals() )
 

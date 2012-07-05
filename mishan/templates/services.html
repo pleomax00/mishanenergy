@@ -1,0 +1,110 @@
+{% extends 'master.html' %}
+{% load core_tags %}
+
+{% block title %}Services{% endblock %}
+
+{% block extraincludes %}
+<script type="text/javascript">
+   $(function(){
+		 //Tab jquery
+		 $(".tab_content").hide(); 
+		 $("ul.tabs li:first").addClass("active").show(); 
+		 $(".tab_content:first").show(); 
+		 $("ul.tabs li").click(function() {
+			  $("ul.tabs li").removeClass("active");
+		 	  $(this).addClass("active"); 
+			  $(".tab_content").hide(); 
+			  var activeTab = $(this).find("a").attr("href"); 
+			  $(activeTab).fadeIn(); 
+			  return false;
+		 });
+     });	
+</script>
+{% endblock %}
+
+{% block maincontents %}
+        <!-- BEGIN OF HEADER IMAGE -->
+        <div id="headerimage-container">
+            <div id="headerimage-top"></div>
+            <div id="headerimage">
+                <div class="headerimage-dot"></div>
+                <img src="/static/images/page-title2.jpg" alt="" /> 
+            </div>
+            <div id="headerimage-bottom"></div>
+        </div>
+        <!-- END OF HEADER IMAGE -->
+
+        <!-- BEGIN OF CONTENT -->
+        <div id="content">
+        	<div class="maincontent-inner">
+            	
+                <!-- begin of pagetitle --> 
+                <div class="pagetitle">
+                	<h1>{{"servicehead"|snippet}}</h1>
+                	<h6>{{"service_desc"|snippet}}</h6>
+                </div>
+                <!-- end of front slogan --> 
+                
+                <div class="col-1">
+                    <p class="highlighttext">{{"service_text"|snippet}}</p>
+                    <div class="services-content">
+                    	<div class="serv-title">
+                        	<h5>{{"servtopic1"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                        	<img src="/static/images/serv-icon1.png" alt="" class="serv-icon" />
+                        	<p>{{"servtopic1desc"|snippet}}</p>
+                        </div>
+                    </div>
+                    <div class="services-content-last">
+                    	<div class="serv-title">
+                        	<h5>{{"servtopic2"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                        	<img src="/static/images/serv-icon2.png" alt="" class="serv-icon" />
+                        	<p>{{"servtopic2desc"|snippet}}</p>
+                        </div>
+                    </div>
+                    <div class="services-content">
+                    	<div class="serv-title">
+                        	<h5>{{"servtopic3"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                        	<img src="/static/images/serv-icon3.png" alt="" class="serv-icon" />
+                        	<p>{{"servtopic3desc"|snippet}}</p>
+                        </div>
+                    </div>
+                    <div class="services-content-last">
+                    	<div class="serv-title">
+                        	<h5>{{"servtopic4"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                        	<img src="/static/images/serv-icon4.png" alt="" class="serv-icon" />
+                        	<p>{{"servtopic4desc"|snippet}}</p>
+                        </div>
+                    </div>
+                    <div class="services-content">
+                    	<div class="serv-title">
+                        	<h5>{{"servtopic5"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                        	<img src="/static/images/serv-icon5.png" alt="" class="serv-icon" />
+                        	<p>{{"servtopic5desc"|snippet}}</p>
+                        </div>
+                    </div>
+                    <div class="services-content-last">
+                    	<div class="serv-title">
+                        	<h5>{{"servtopic6"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                        	<img src="/static/images/serv-icon6.png" alt="" class="serv-icon" />
+                        	<p>{{"servtopic6desc"|snippet}}</p>
+                        </div>
+                    </div>                                      	            
+                </div>                               
+                
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- END OF CONTENT -->
+{% endblock %}

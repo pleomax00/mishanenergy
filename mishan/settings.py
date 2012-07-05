@@ -201,8 +201,8 @@ if MODE == "DEVELOPMENT":
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     EMAIL_HOST = "email-smtp.us-east-1.amazonaws.com"
-    EMAIL_HOST_USER = "AKIAJVS3YDCOVA43XAGA"
-    EMAIL_HOST_PASSWORD = "Ai+4EAISj2nIpWfPuZpnDDiRpcQzdrqgFn1RkDfoOyaT"
+    EMAIL_HOST_USER = "AKIAI5YJ46G24MRR2RYA"
+    EMAIL_HOST_PASSWORD = "AlWw9h9rbL6qQJB+lhbrXaZovBaiIwh2GidUaLfyLjV2"
     EMAIL_USE_TLS = True
 
 LOGIN_URL = "/auth/login"

@@ -1,0 +1,18 @@
+{% extends 'aboutmaster.html'%}
+{% load core_tags %}
+
+{% block title %}Quality and Safety Process | About Us{% endblock %}
+
+{% block aboutustitle %}
+                <!-- begin of pagetitle --> 
+                <div class="pagetitle">
+                	<h1>{{"qualityhead"|snippet}}</h1>
+                	<h6>{{"quality_desc"|snippet}}</h6>
+                </div>
+                <!-- end of front slogan --> 
+ 
+{% endblock %}
+
+{% block aboutusmain %}
+    {{"quality"|snippet}}
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'aboutmaster.html'%}
+{% load core_tags %}
+
+{% block title %}Resources and Facilities | About Us{% endblock %}
+
+{% block aboutustitle %}
+                <!-- begin of pagetitle --> 
+                <div class="pagetitle">
+                	<h1>{{"facility_head"|snippet}}</h1>
+                	<h6>{{"facility_desc"|snippet}}</h6>
+                </div>
+                <!-- end of front slogan --> 
+ 
+{% endblock %}
+
+{% block aboutusmain %}
+                <div class="col-1" style="width: auto;">
+                    <p class="highlighttext">{{"facilitiestext"|snippet}}</p>
+
+                    <div class="services-content">
+                    	<div class="serv-title">
+                        	<h5>{{"facility1"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                        	<img src="/static/images/serv-icon1.png" alt="" class="serv-icon" />
+                        	<p>{{"facility1desc"|snippet}}</p>
+                        </div>
+                    </div>
+
+                    <div class="services-content">
+                    	<div class="serv-title">
+                        	<h5>{{"facility2"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                        	<img src="/static/images/serv-icon1.png" alt="" class="serv-icon" />
+                        	<p>{{"facility2desc"|snippet}}</p>
+                        </div>
+                    </div>
+
+            </div>
+{% endblock %}

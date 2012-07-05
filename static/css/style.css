@@ -17,12 +17,12 @@ body{
 
 /* links */
 a, a:visited{
-	color:#737373;
+	color:#828282;
 	text-decoration:none;
 }
 a:hover{
 	color:#858585; 
-	text-decoration:none;
+	text-decoration:underline;
 }
 a img{
 	border:none

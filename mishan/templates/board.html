@@ -5,16 +5,17 @@
 
 {% block aboutustitle %}
         <div class="pagetitle">
-            <h1>Board of Directors</h1>
-
-            {% if member %}
-            {{member|snippet}}
-            {% endif %}
+            <h1>{{"directors_head"|snippet}}</h1>
 
         </div>
 {% endblock %}
 
 {% block aboutusmain %}
+            <p>{% if member %}
+            {{member|snippet}}
+            {% endif %}</p>
+
+
             <div class="about-content">
                 <div class="meet-team">
                     <h5>Meet the team</h5>
