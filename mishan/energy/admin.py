@@ -135,13 +135,13 @@ def changepassword (request):
 
 def textstrings (request):
     """ Change web sites text strings """
-    textpath = os.path.join (settings.MARK_DOWN, "static")
+    textpath = os.path.join (settings.MARK_DOWN)
     files = filter (lambda x: x.endswith ('.txt'), os.listdir (textpath))
     return render_to_response ("admin/textstrings.html", locals())
 
 def settextstring (request):
     """ Save a file """
-    textpath = os.path.join (settings.MARK_DOWN, "static", request.POST.get ('file'))
+    textpath = os.path.join (settings.MARK_DOWN, request.POST.get ('file'))
     if not textpath.endswith (".txt"):
         textpath += ".txt"
     file (textpath, "w").write (request.POST.get ('value'))
