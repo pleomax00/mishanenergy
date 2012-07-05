@@ -1134,7 +1134,7 @@ ul.categories-list li a.count-category{
 .meet-team{
 	width:155px;
 	padding-top:18px;
-	border-top:1px solid #a2c437;
+	/*border-top:1px solid #a2c437;*/
 	float:left;
 }
 .meet-team p{
@@ -1146,7 +1146,7 @@ ul.team-list{
 	width:455px;
 	margin:0px;
 	padding:18px 0px 0px 15px;
-	border-top:1px solid #d0d1d1;
+	/*border-top:1px solid #d0d1d1;*/
 	float:left;
 }
 ul.team-list li{

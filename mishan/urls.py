@@ -9,6 +9,8 @@ from mishan.energy.admin import *
 urlpatterns = patterns('',
     url(r'^$', 'mishan.energy.views.index'),
     url(r'^about$', 'mishan.energy.views.about'),
+    url(r'^about/(\w+)$', 'mishan.energy.views.about'),
+    url(r'^about/board/(\w+)$', 'mishan.energy.views.board'),
 
     url(r'^admin$', 'mishan.energy.admin.index'),
     url(r'^admin/createmail$', createmail),

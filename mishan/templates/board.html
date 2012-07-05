@@ -1,0 +1,34 @@
+{% extends 'aboutmaster.html'%}
+{% load core_tags %}
+
+{% block title %}Board of Directors | About Us{% endblock %}
+
+{% block aboutustitle %}
+        <div class="pagetitle">
+            <h1>Board of Directors</h1>
+
+            {% if member %}
+            {{member|snippet}}
+            {% endif %}
+
+        </div>
+{% endblock %}
+
+{% block aboutusmain %}
+            <div class="about-content">
+                <div class="meet-team">
+                    <h5>Meet the team</h5>
+                    <p>{{"meet_team_sub"|snippet}}</p>
+                </div>
+                <ul class="team-list">
+                    {% for val in board %}
+                    <li><a href='/about/board/{{val.0}}'><img src="/static/images/{{val.0}}.jpg" alt="{{val.1}}" class="imgborder" /><p>{{val.1}}</p></a></li>
+                    {% endfor %}
+                    <li><img src="/static/images/team2.jpg" alt="" class="imgborder" /><p>John Pantau</p></li>
+                    <li><img src="/static/images/team3.jpg" alt="" class="imgborder" /><p>Suryo Bowo</p></li>
+                    <li class="team-last"><img src="/static/images/team4.jpg" alt="" class="imgborder" /><p>Ken Arok</p></li>
+                </ul>
+            </div>
+
+{% endblock %}
+

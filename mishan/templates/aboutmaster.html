@@ -63,31 +63,12 @@
 <div id="content">
     <div class="maincontent-inner">
         
-    {% block aboutus %}
-        <!-- begin of pagetitle --> 
-        <div class="pagetitle">
-            <h1>About us.</h1>
-            <h6>{{"about_punch"|snippet}}</h6>
-        </div>
-        <!-- end of front slogan --> 
+    {% block aboutustitle %}
     {% endblock %}
         
         <div class="col-2-2">
-            <p class="highlighttext">{{"about_main_top"|snippet}}</p>
-            <p>{{"about_main_bottom"|snippet}}</p>
-            <p>{{"about_main_even_bottom"|snippet}}</p>
-            <!--div class="about-content">
-                <div class="meet-team">
-                    <h5>Meet the team</h5>
-                    <p>{{"meet_team_sub"|snippet}}</p>
-                </div>
-                <ul class="team-list">
-                    <li><img src="/static/images/team1.jpg" alt="" class="imgborder" /><p>Andra Lee</p></li>
-                    <li><img src="/static/images/team2.jpg" alt="" class="imgborder" /><p>John Pantau</p></li>
-                    <li><img src="/static/images/team3.jpg" alt="" class="imgborder" /><p>Suryo Bowo</p></li>
-                    <li class="team-last"><img src="/static/images/team4.jpg" alt="" class="imgborder" /><p>Ken Arok</p></li>
-                </ul>
-            </div-->
+            {% block aboutusmain %}
+            {% endblock %}
             <!--div class="about-content">
                 <div class="meet-team">
                     <h5>What we do</h5>

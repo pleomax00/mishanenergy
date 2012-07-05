@@ -2,12 +2,18 @@
 {% load core_tags %}
 
 {% block title %}About Us{% endblock %}
-{% block aboutus %}
+{% block aboutustitle %}
         <!-- begin of pagetitle --> 
         <div class="pagetitle">
-            <h1>About us.</h1>
+            <h1>About us</h1>
             <h6>{{"about_punch"|snippet}}</h6>
         </div>
         <!-- end of front slogan --> 
+{% endblock %}
+
+{% block aboutusmain %}
+    <p class="highlighttext">{{"about_main_top"|snippet}}</p>
+    <p>{{"about_main_bottom"|snippet}}</p>
+    <p>{{"about_main_even_bottom"|snippet}}</p>
 {% endblock %}
 
