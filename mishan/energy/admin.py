@@ -113,7 +113,6 @@ def changepassword (request):
         old = request.POST.get ('old', '')
         new1 = request.POST.get ('new1', '')
         new2 = request.POST.get ('new2', '')
-        print old, new1, new2
         if old == '' or new1 == '' or new2 == '' or email == '':
             return HttpResponseRedirect ('/admin/changepassword?error=allfieldsreq')
         if len(new1) < 4:
@@ -132,6 +131,8 @@ def changepassword (request):
 
         u.set_password (new1)
         u.save ()
+        emailname = u.email.split ("@")[0]
+        os.system ("echo '%s:%s' | sudo chpasswd" % (emailname, new1))
         return HttpResponseRedirect ('/admin/changepassword?msg=success')
 
     return render_to_response ("admin/changepassword.html", locals())
