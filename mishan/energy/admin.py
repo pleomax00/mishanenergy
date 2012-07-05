@@ -90,18 +90,22 @@ def createmail (request):
 def deletemail (request, iid):
     u = User.objects.get (id = iid)
     
-    server = xmlrpclib.ServerProxy ('https://api.webfaction.com/')
-    session_id, account = server.login (settings.WEBFACTION_USER, settings.WEBFACTION_PASSWORD)
+    #server = xmlrpclib.ServerProxy ('https://api.webfaction.com/')
+    #session_id, account = server.login (settings.WEBFACTION_USER, settings.WEBFACTION_PASSWORD)
 
-    try:
-        server.delete_email (session_id, u.email)
-        emailname = u.email.split ("@")[0]
-        server.delete_mailbox (session_id, emailname)
-    except:
-        print "Cannot remove", u.email
-        pass
+    #try:
+    #    server.delete_email (session_id, u.email)
+    ##    emailname = u.email.split ("@")[0]
+    #    server.delete_mailbox (session_id, emailname)
+    #except:
+    #    print "Cannot remove", u.email
+    #    pass
 
     email = u.email
+    emailname = email.split ("@")[0]
+    os.system ("sudo userdel %s" %(emailname))
+    os.system ("sudo mv /home/%s /home/ubuntu/backup/delusers", % (emailname))
+
     u.delete()
     return HttpResponseRedirect ('/admin/createmail?msg=deleted&email=' + email)
 
