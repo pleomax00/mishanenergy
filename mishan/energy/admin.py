@@ -31,7 +31,6 @@ class EmailRegForm (forms.Form):
     def clean_retype_password (self):
         data1 = self.cleaned_data.get ('password')
         data2 = self.cleaned_data.get ('retype_password')
-        print data1, data2
         if data1 != data2:
             raise forms.ValidationError ("Both the supplied passwords must match")
         return data1
@@ -125,7 +124,6 @@ def changepassword (request):
         if old == '' or new1 == '' or new2 == '' or email == '':
             return HttpResponseRedirect ('/admin/changepassword?error=allfieldsreq')
         if len(new1) < 4:
-            print len(new1)
             return HttpResponseRedirect ('/admin/changepassword?error=minchar')
         if new1 != new2:
             return HttpResponseRedirect ('/admin/changepassword?error=match')
