@@ -3,8 +3,10 @@ import os
 
 MODE = os.getenv ( "MODE", "PRODUCTION" )
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+if MODE == "DEVELOPMENT":
+    DEBUG = True
+    TEMPLATE_DEBUG = DEBUG
+
 FORCE_SCRIPT_NAME = ""
 
 if MODE == "PRODUCTION":
