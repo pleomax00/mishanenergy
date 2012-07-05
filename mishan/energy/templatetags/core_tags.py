@@ -27,8 +27,8 @@ def snippet (name):
     except IOError:
         return name
     contents = f.read ()
-    contents = textile.textile(contents)
-    #contents = contents.replace ("\n","<br/>")
+    #reply = textile.textile(contents)
+    contents = contents.replace ("\n","<br/>")
     return mark_safe (contents)
 
 
