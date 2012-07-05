@@ -7,7 +7,7 @@ def slug (string):
     return "_".join (re.findall ("\w+", string)).lower ()
 
 def get_board (dictionary = False):
-    f = file ( os.path.join (settings.MARK_DOWN, "static", "directors.txt" ), "r" )
+    f = file ( os.path.join (settings.MARK_DOWN, "directors.txt" ), "r" )
     contents = f.read ()
     board = contents.split (",")
     board = map ( lambda x: x.strip(), board )

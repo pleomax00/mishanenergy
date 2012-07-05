@@ -16,7 +16,7 @@ def totextile (text):
 def snippet (name):
     """ Load a textile snippet """
     try:
-        f = file ( os.path.join (settings.MARK_DOWN, "static", "%s.txt" % (name)), "r" )
+        f = file ( os.path.join (settings.MARK_DOWN, "%s.txt" % (name)), "r" )
     except IOError:
         return name
     contents = f.read ()

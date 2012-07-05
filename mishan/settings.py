@@ -208,7 +208,7 @@ else:
 LOGIN_URL = "/auth/login"
 EMAIL_REGEX = "[a-zA-Z0-9._%-]+@[a-zA-Z0-9._%-]+.[a-zA-Z]{2,6}"
 
-MARK_DOWN = os.path.join ( PATH_ROOT, "mishan", "markdown" )
+MARK_DOWN = os.path.join ( PATH_ROOT, "mishan", "markdown", MODE.lower() )
 
 AWS_ACCESS_KEY_ID = 'AKIAJB3GGH5XSBCGAZ4Q'
 AWS_SECRET_ACCESS_KEY = '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'
