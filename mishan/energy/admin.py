@@ -2,12 +2,14 @@ from django.http import *
 from django.shortcuts import render_to_response
 from django import forms
 from django.db.models import *
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth.models import check_password
 from django.conf import settings
 from django.forms.extras.widgets import SelectDateWidget
 import xmlrpclib, os
 from mishan.energy.models import *
+import hashlib
 
 class NewsForm (forms.Form):
     news_text = forms.CharField (label = "News Text", max_length = 100, widget=forms.Textarea)
@@ -23,7 +25,7 @@ class EmailRegForm (forms.Form):
 
     def clean_master_password (self):
         passwd = self.cleaned_data.get ('master_password')
-        if passwd != settings.MASTER_PASSWORD:
+        if passwd != hashlib.md5 (settings.MASTER_PASSWORD).hexdigest():
             raise forms.ValidationError ("To create a new user, you need to provide valid master password.")
 
     def clean_retype_password (self):
@@ -47,8 +49,11 @@ class EmailRegForm (forms.Form):
         return email
 
 
+@login_required
 def index (request):
     """ serves /admin """
+    if request.email not in settings.LINE_MANAGERS:
+        raise Http404
     return render_to_response ("admin/index.html", locals())
 
 
@@ -153,7 +158,7 @@ def settextstring (request):
     textpath = os.path.join (settings.MARK_DOWN, request.POST.get ('file'))
     if not textpath.endswith (".txt"):
         textpath += ".txt"
-    file (textpath, "w").write (request.POST.get ('value'))
+    file (textpath, "wb+").write (request.POST.get ('value'))
     if request.POST.has_key ("next"):
         return HttpResponseRedirect (request.POST.get ("next"))
     return HttpResponse ("{}")
@@ -181,3 +186,15 @@ def removenews (request, iid):
     n = News.objects.get (id = iid)
     n.delete ()
     return HttpResponseRedirect ("/admin/news?action=removed")
+
+
+def loginpage (request):
+    """ Serves login page """
+    if request.method == "POST":
+        login = request.POST.get ("login", "")
+        password = request.POST.get ("password", "")
+        if login == "" or password == "":
+            return HttpResponseRedirect ("/auth/login?error=allfields&next=" + request.POST.get('next','/admin'))
+    return render_to_response ("admin/login.html", locals())
+
+

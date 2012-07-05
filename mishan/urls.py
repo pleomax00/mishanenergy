@@ -28,5 +28,8 @@ urlpatterns = patterns('',
     url(r'^admin/settextval$', settextstring),
     url(r'^admin/news$', editnews),
     url(r'^admin/removenews/(\d+)$', removenews),
+
+    url(r'^auth/login$', 'mishan.energy.admin.loginpage'),
+
 )
 

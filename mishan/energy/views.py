@@ -66,3 +66,4 @@ def genericpage (request, page):
     image = page+"_head"
     return render_to_response ( "genericpage.html", locals() )
 
+

@@ -222,6 +222,6 @@ REDIRECTION_RULES = [ ('mishanenergy.com'), 'www.mishanenergy.com' ]
 WEBFACTION_USER = 'tunesdiary'
 WEBFACTION_PASSWORD = 'webfactioni586'
 
-MASTER_PASSWORD = "mishanmishan"
+MASTER_PASSWORD = "5c35d7a253ff6fbc5906446eaa5e7ca1"
 
 
