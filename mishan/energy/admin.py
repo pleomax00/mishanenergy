@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.models import check_password
 from django.conf import settings
 from django.forms.extras.widgets import SelectDateWidget
-import xmlrpclib
+import xmlrpclib, os
 from mishan.energy.models import *
 
 class NewsForm (forms.Form):
@@ -69,12 +69,16 @@ def createmail (request):
 
             u.save ()
 
-            server = xmlrpclib.ServerProxy ('https://api.webfaction.com/')
-            session_id, account = server.login (settings.WEBFACTION_USER, settings.WEBFACTION_PASSWORD)
+            #server = xmlrpclib.ServerProxy ('https://api.webfaction.com/')
+            #session_id, account = server.login (settings.WEBFACTION_USER, settings.WEBFACTION_PASSWORD)
 
             emailname = email.split ("@")[0]
-            response = server.create_mailbox (session_id, emailname, False)
-            resp = server.create_email (session_id, email, emailname)
+            os.system ("sudo useradd %s" %(emailname))
+            os.system ("echo '%s:%s' | sudo chpasswd" % (emailname, password))
+            os.system ("sudo mkdir /home/%s" %(emailname))
+            os.system ("sudo chown -R /home/%s" %(emailname))
+            #response = server.create_mailbox (session_id, emailname, False)
+            #resp = server.create_email (session_id, email, emailname)
 
             return HttpResponseRedirect ("/admin/createmail?msg=success&email=" + eform.cleaned_data.get ('email'))
     else:
