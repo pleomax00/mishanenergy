@@ -1,0 +1,45 @@
+{% extends 'master.html' %}
+{% load core_tags %}
+
+{% block title %}500 Internal Server Error{% endblock %}
+        
+{% block maincontents %}
+        <!-- BEGIN OF HEADER IMAGE -->
+        <div id="headerimage-container">
+        	<div id="headerimage-top"></div>
+            <div id="headerimage">
+                <div class="headerimage-dot"></div>
+                <img src="/static/images/page-title.jpg" alt="" /> 
+            </div>
+            <div id="headerimage-bottom"></div>
+        </div>
+        <!-- END OF HEADER IMAGE -->
+        
+        <!-- BEGIN OF CONTENT -->
+        <div id="content">
+        	<div class="maincontent-inner">
+            	
+                <!-- begin of pagetitle --> 
+                <div class="pagetitle">
+                	<h1>500.</h1>
+                	<h6>Internal Server Error</h6>
+                </div>
+                <!-- end of front slogan --> 
+                
+                <div class="col-2-2 error-page">
+                    <div class="stop-sign">
+                        <img src="/static/images/stop-sign.jpg" alt="" />
+                    </div>
+                    <div class="error-message">
+                        <h1>error 500</h1>
+                        <h2>Ooops there was an error processing your request...</h2> 
+                        <p>We're sorry, but we can't process your request right now, probably there is a problem with the server, we've been notified automaticaly and we'll resolve the same at the earliest, or you can drop us a mail at support@mishanenergy.com</p>
+                    </div>	
+                </div>                               
+                
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- END OF CONTENT -->
+
+{% endblock %}
