@@ -1,0 +1,33 @@
+<h5>Power, Oil and Gas Sectors:</h5>NSPCL 
+NTPC 
+NFL 
+IOCL 
+BPCL 
+HPCL 
+GAIL 
+RIL 
+Nuclear Power Station
+
+<h5>Steel Sector: </h5>Bhilai Steel Plant 
+Rourkela Steel Plant 
+Bokaro Steel Plant 
+Jindal Steel and Power Ltd. 
+Nalwa Steel and Power Ltd. 
+Bajrang Power and Ispat Ltd. 
+Bhushan Steel
+BALCO, Korba 
+Shyam DRI
+
+<h5>Cement sector: </h5>Ambuja Cement Ltd. 
+Century Group 
+Jaypee Ltd. 
+Grasim Cement
+
+<h5>Sugar Industry: </h5>Balrampur Chini Mills 
+Dalmia Chinni Mills 
+Simbholi Sugar Mills 
+Renuka Sugar Mills 
+Triveni Sugars, U.P. 
+Shri Prabhulingeshwar Sugar 
+Wave Industries 
+Haryana Co-op. Sugar Ltd.

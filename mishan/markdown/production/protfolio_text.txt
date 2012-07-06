@@ -1,0 +1,97 @@
+<table>
+<tr>
+        <td width= "50"> <b>  No. </b> </td>
+        <td width= "250"> <b> Customer </b> </td>
+        <td width= "600"> <b> Area of Business </b> </td>
+ <tr>
+
+<tr>
+        <td>1</td>
+        <td>Wave Industries, Amroha</td>
+        <td>Boiler Retrofit & Up-gradation</td>
+<tr>
+
+
+<tr>
+        <td>2</td>
+        <td>Balrampur Chini Mills</td>
+        <td>Superheater Modification & Up-gradation</td>
+<tr>
+
+<tr>
+        <td>3</td>
+        <td>Shah Sponge, Tatanagar</td>
+        <td>HP Piping - Design & Erection - 15 MW Power Plant</td>
+<tr>
+
+<tr>
+        <td>4</td>
+        <td>Mahakali Power</td>
+        <td>HP Piping - Design & Erection - 15 MW Power Plant</td>
+<tr>
+
+<tr>
+        <td>5</td>
+        <td>Nawanshahar Power Project</td>
+        <td>Project Management of 20 MW Co-Gen Plant</td>
+<tr>
+
+<tr>
+        <td>6</td>
+        <td>Best Foods Limited</td>
+        <td>Civil Design & Engineering of 6 MW Plant</td>
+<tr>
+
+<tr>
+        <td>7</td>
+        <td>Shyam DRI, Jharsuguda</td>
+        <td>Resolving Operaional problems of 135 TPH AFBC Boiler</td>
+<tr>
+
+<tr>
+        <td>8</td>
+        <td>Ban Rai Sugar Co. Ltd., Thailand</td>
+        <td>Resolving Operaional problems of 200 TPH, Travelling Grate Boiler</td>
+<tr>
+
+<tr>
+        <td>9</td>
+        <td>Sharaung Sugar Co. Ltd., Thailand</td>
+        <td>Resolving Operaional problems of 200 TPH, Travelling Grate Boiler</td>
+<tr>
+
+<tr>
+        <td>10</td>
+        <td>Dhruvdesh Metasteels, Karnataka</td>
+        <td>Boiler Erection</td>
+<tr>
+<tr>
+        <td>11</td>
+        <td>Haryana Co-op Sugar, Rohtak</td>
+        <td>Boiler Retrofit and Resolution of Operation Problem</td>
+<tr>
+<tr>
+        <td>12</td>
+        <td>Dangote Sugar Refinery, Nigeria</td>
+        <td>Chemical Cleaning, Operational Trouble Shooting of 6 X 90 TPH Gas fired Boilers</td>
+<tr>
+
+<tr>
+        <td>13</td>
+        <td>Shah Sponge, Tatanagar</td>
+        <td>Boiler Erection</td>
+<tr>
+
+<tr>
+        <td>14</td>
+        <td>JITF Epolis, Okhla, New Delhi</td>
+        <td>Commissioning and Annual Plant Maintenance, Contract of 20 MW MSW Plant</td>
+<tr>
+
+<tr>
+        <td>15</td>
+        <td>Kushaahn Energy</td>
+        <td>Resolving Operational Problems of 25 MW TG Boiler</td>
+<tr>
+
+</table>
