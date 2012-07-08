@@ -8,6 +8,7 @@
 <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyAqczQNk8RA1OW8dkogZNJhjK5PGPtkY9Y"></script>
 <script type="text/javascript">
    $(function(){ 
+        {% comment %}
    		//Twitter Jquery Setting
 		$("#twitter").getTwitter({
 			userName: '{{"tweetuser"|snippet}}',
@@ -16,6 +17,7 @@
 			slideIn: true,
 			slideDuration: 750
 		});	
+        {% endcomment %}
 		
 		//Tab jquery
 		 $(".tab_content").hide(); 
@@ -123,6 +125,7 @@
                     </div>  	            
                 </div>              
                 
+                    {% comment %}
                 <div class="col-3">
                  	<div class="sidebar-content twitter-bg">
                         <h5>Tweet..!!</h5>
@@ -141,6 +144,7 @@
                         </ul>
                     </div>               
                 </div>                                
+                    {% endcomment %}
                 
             </div>
         </div>
