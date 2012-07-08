@@ -1,0 +1,7 @@
+#nobr
+<table>
+<tr>
+   <td>abc</td>
+   <td>ok</td>
+</tr>
+</table>
