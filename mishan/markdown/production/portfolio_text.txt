@@ -1,27 +1,89 @@
-<TABLE>
+#nobr
+<div class="table-cyan">
+        <table class="table">
+        <thead>
 <Tr>
-<Td WIDTH="50">No.</TD>
-<Td WIDTH="300">Customer</TD>
-<Td WIDTH="600">Area of Business</TD>
+<Th><b>No.</b></TD>
+<Th><b>Customer</b></TD>
+<Th><b>Area of Business</b></TD>
 </Tr>
+</thead>
+<tbody>
 <Tr>
-<Td WIDTH="150">1.</TD>
+<Td WIDTH="50">1.</TD>
 <Td WIDTH="300">Wave Industries, Amroha</TD>
 <Td WIDTH="600">Boiler Retrofit & Up-gradation</TD>
 </Tr>
 <Tr>
-<Td WIDTH="150">2.</TD>
+<Td WIDTH="50">2.</TD>
 <Td WIDTH="300">Balrampur Chini Mills</TD>
 <Td WIDTH="600">Superheater Modification & Up-gradation</TD>
 </Tr>
 <Tr>
-<Td WIDTH="150">3.</TD>
+<Td WIDTH="50">3.</TD>
 <Td WIDTH="300">Shah Sponge, Tatanagar</TD>
 <Td WIDTH="600">HP Piping - Design & Erection - 15 MW Power Plant</TD>
 </Tr>
 <Tr>
-<Td WIDTH="150">4.</TD>
+<Td WIDTH="50">4.</TD>
 <Td WIDTH="300">Mahakali Power</TD>
 <Td WIDTH="600">HP Piping - Design & Erection - 15 MW Power Plant</TD>
 </Tr>
+<Tr>
+<Td WIDTH="50">5.</TD>
+<Td WIDTH="300">Nawanshahar Power Project</TD>
+<Td WIDTH="600">Project Management of 20 MW Co-Gen Plant</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">6.</TD>
+<Td WIDTH="300">Best Foods Limited</TD>
+<Td WIDTH="600">Civil Design & Engineering of 6 MW Plant</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">7.</TD>
+<Td WIDTH="300">Shyam DRI, Jharsuguda</TD>
+<Td WIDTH="600">Resolving Operaional problems of 135 TPH AFBC Boiler</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">8.</TD>
+<Td WIDTH="300">Ban Rai Sugar Co. Ltd., Thailand</TD>
+<Td WIDTH="600">Resolving Operaional problems of 200 TPH Travelling Grate Boiler</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">9.</TD>
+<Td WIDTH="300">Sharaung Sugar Co. Ltd., Thailand</TD>
+<Td WIDTH="600">Resolving Operaional problems of 200 TPH Travelling Grate Boiler</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">10.</TD>
+<Td WIDTH="300">Dhruvdesh Metasteels, Karnataka</TD>
+<Td WIDTH="600">Boiler Erection</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">11.</TD>
+<Td WIDTH="300">Haryana Co-op Sugar, Rohtak</TD>
+<Td WIDTH="600">Boiler Retrofit and Resolution of Operation Problems</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">12.</TD>
+<Td WIDTH="300">Dangote Sugar Refinery, Nigeria</TD>
+<Td WIDTH="600">Chemical Cleaning, Operational Troubleshooting of 6 X 90 TPH Gas fired Boilers</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">13.</TD>
+<Td WIDTH="300">Shah Sponge, Tatanagar</TD>
+<Td WIDTH="600">Boiler Erection</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">14.</TD>
+<Td WIDTH="300">JITF Epolis, Okhla, New Delhi</TD>
+<Td WIDTH="600">Commissioning and Annual Plant Maintenance Contract of 20 MW MSW Plant</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">15.</TD>
+<Td WIDTH="300">Kushaahn Energy</TD>
+<Td WIDTH="600">Resolving Operational Problems of 25 MW TG Boiler</TD>
+</Tr>
+</tbody>
 </table>
+</div>
