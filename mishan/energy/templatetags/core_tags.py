@@ -27,8 +27,14 @@ def snippet (name):
     except IOError:
         return name
     contents = f.read ()
+    print contents
+    if contents.strip().startswith ("#nobr"):
+        print "yes"
+        contents = contents.strip()[5:].strip()
+        print contents
+    else:
+        contents = contents.replace ("\n","<br/>")
     #reply = textile.textile(contents)
-    contents = contents.replace ("\n","<br/>")
     return mark_safe (contents)
 
 
