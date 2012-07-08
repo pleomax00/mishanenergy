@@ -5,8 +5,8 @@
 
 body{
 	font-family:Verdana,Arial,Georgia;
-	font-size:12px;
-	color:#828282;
+	font-size:13px;
+	color:black;
 	line-height:22px;
 	padding:0px;
 	margin:0px;
@@ -17,11 +17,11 @@ body{
 
 /* links */
 a, a:visited{
-	color:#828282;
+	color:#444;
 	text-decoration:none;
 }
 a:hover{
-	color:#858585; 
+	color:#777; 
 	text-decoration:underline;
 }
 a img{
@@ -61,9 +61,9 @@ hr {
 }
 strong{color:#757575;}
 .highlighttext{
-	font-size:17px;
+	font-size:13px;
 	font-family:Georgia,Verdana,Tahoma;
-	color:#828282;
+	color:black;
 	line-height:24px;
 	margin-bottom:28px;
 }
@@ -531,7 +531,7 @@ p#vtip{
 #headerimage-bottom{
 	width:1090px;
 	height:137px;
-	margin:-170px 0px -300px 0px;
+	margin:-168px 0px -300px 0px;
 	background-image:url(../images/bg-bottom-slide-inner.png);
 	background-repeat:no-repeat;
 	position:absolute;
@@ -600,7 +600,7 @@ p#vtip{
 	margin-bottom:5px;
 }
 .pagetitle h6{
-	color:#a6a6a6;
+	color:#444;
 }
 
 
@@ -833,7 +833,7 @@ p#vtip{
 	width:778px;	
 	font-size:17px;
 	font-family:Georgia,Verdana,Tahoma;
-	margin:0px auto 47px auto;
+	margin:0px auto 25px auto;
 }
 .front-box{
 	width:373px;
@@ -872,7 +872,7 @@ ul.featured-logo li{
 	text-align:center;
 }
 .front-column{
-	padding-top:20px;
+	padding-top:10px;
 	float:left;
 }
 .col-3-front{
@@ -1064,7 +1064,7 @@ ul.footer-social li span{
 .divider{
 	width:100%;
 	height:1px;
-	margin:28px 0px 25px 0px;
+	margin:10px 0;
 	background-color:#dcdcdc;
 	clear:both;
 	display:block;
@@ -1225,13 +1225,13 @@ ul.testimonials-list li p{
 	float:left;
 }
 .serv-title{
-	width:130px;
+	width:50px;
 	padding-top:18px;
 	border-top:1px solid #a2c437;
 	float:left;
 }
 .serv-desc{
-	width:281px;
+	width:355px;
 	background-color:#ffffff;
 	padding:18px 25px 2px 25px;
 	margin:0px 0px 10px 0px;
@@ -1771,7 +1771,7 @@ ul#portfolio-list-4col li img{
 ------------------------------------------------------*/
 .col-1{
 	width:960px;
-	margin:0px 19px 15px 19px;
+	margin:0px 19px 0 19px;
 	float:left;
 }
 .col-2{
@@ -1801,7 +1801,8 @@ ul#portfolio-list-4col li img{
 }
 .col-3{
 	width:294px;
-	margin:0px 19px 15px 19px;
+	padding:0px 19px 15px 19px;
+    border-left: 1px solid #DCDCDC;
 	float:left;
 }
 .col-4{
@@ -2577,4 +2578,8 @@ label{
 
 .darr {
     font-size: 10px;
+}
+.bulleted li {
+    list-style: disc outside none;
+    margin-left: 50px;
 }
