@@ -1,7 +1,27 @@
-<TABLE BORDER="2" CELLPADDING="2" CELLSPACING="2" WIDTH="300">
+<TABLE>
 <Tr>
-<Td WIDTH="150">1.</TD>
+<Td WIDTH="50">No.</TD>
 <Td WIDTH="300">Customer</TD>
 <Td WIDTH="600">Area of Business</TD>
+</Tr>
+<Tr>
+<Td WIDTH="150">1.</TD>
+<Td WIDTH="300">Wave Industries, Amroha</TD>
+<Td WIDTH="600">Boiler Retrofit & Up-gradation</TD>
+</Tr>
+<Tr>
+<Td WIDTH="150">2.</TD>
+<Td WIDTH="300">Balrampur Chini Mills</TD>
+<Td WIDTH="600">Superheater Modification & Up-gradation</TD>
+</Tr>
+<Tr>
+<Td WIDTH="150">3.</TD>
+<Td WIDTH="300">Shah Sponge, Tatanagar</TD>
+<Td WIDTH="600">HP Piping - Design & Erection - 15 MW Power Plant</TD>
+</Tr>
+<Tr>
+<Td WIDTH="150">4.</TD>
+<Td WIDTH="300">Mahakali Power</TD>
+<Td WIDTH="600">HP Piping - Design & Erection - 15 MW Power Plant</TD>
 </Tr>
 </table>
