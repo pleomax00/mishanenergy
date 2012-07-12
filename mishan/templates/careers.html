@@ -1,0 +1,50 @@
+{% extends 'master.html' %}
+{% load core_tags %}
+
+{% block title %}{{title}}{% endblock %}
+
+
+{% block maincontents %}
+        <!-- BEGIN OF HEADER IMAGE -->
+        <div id="headerimage-container">
+            <div id="headerimage-top"></div>
+            <div id="headerimage">
+                <div class="headerimage-dot"></div>
+                <img src="/static/images/{{image}}.jpg" alt="" /> 
+            </div>
+            <div id="headerimage-bottom"></div>
+        </div>
+        <!-- END OF HEADER IMAGE -->
+
+        <!-- BEGIN OF CONTENT -->
+        <div id="content">
+        	<div class="maincontent-inner">
+            	
+                <!-- begin of pagetitle --> 
+                <div class="pagetitle">
+                	<h1>{{titlename|snippet}}</h1>
+                	<h6>{{titledesc|snippet}}</h6>
+                </div>
+                <!-- end of front slogan --> 
+
+                <div class="col-1">
+                    {% ifequal request.GET.msg "sent" %}
+                    <p class="green">Thanks for your interest in Mishan Energy, we've received your resume and will contact you soon.</p>
+                    {% endifequal %}
+                    {% ifequal request.GET.error "filesize" %}
+                    <p class="red">Oops! The file is too big, your resume must be less than 10 MB (thats a generous limit)</p>
+                    {% endifequal %}
+                    {{pagetext|snippet}}
+                    <form method="post" enctype="multipart/form-data" class="resumeform">
+                        <p>Upload your resume (pdf, doc, docx, or odt):</p>
+                        <input type="file" name="resume" />
+                        <input type="submit" value="Upload" />
+                    </form>
+                </div>
+
+                
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- END OF CONTENT -->
+{% endblock %}
