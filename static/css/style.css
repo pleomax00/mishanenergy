@@ -2583,3 +2583,14 @@ label{
     list-style: disc outside none;
     margin-left: 50px;
 }
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+.resumeform {
+    margin-top: 30px;
+    text-align: center;
+}
+

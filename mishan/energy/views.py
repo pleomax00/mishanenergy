@@ -1,7 +1,7 @@
 from django.http import *
 from django.shortcuts import render_to_response
 from mishan.energy.models import *
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 
 def slug (string):
     return "_".join (re.findall ("\w+", string)).lower ()
@@ -65,5 +65,28 @@ def genericpage (request, page):
     pagetext = page+"_text"
     image = page+"_head"
     return render_to_response ( "genericpage.html", locals() )
+
+
+def careers (request):
+    """ Serves a generic page """
+    page = "careers"
+    if request.method == "POST":
+        fileobj = request.FILES['resume']
+        fname = fileobj.name
+        outfname = "/tmp/%s" % (fname)
+        file (outfname, "wb+").write (fileobj.read ())
+        if fileobj._size > 10 * 1024 * 1024:
+            return HttpResponseRedirect ("/careers?error=filesize")
+        email = EmailMessage ('A new resume uploaded', 'Please find attached\n\nMishan Energy Admin', '"Resume Support" <noreply@mishanenergy.com>', settings.LINE_MANAGERS)
+        email.attach_file (outfname)
+        email.send ()
+        return HttpResponseRedirect ("/careers?msg=sent")
+    title = page.capitalize ()
+    titlename = page+"_h2"
+    titledesc = page+"_minidesc"
+    pagetext = page+"_text"
+    image = page+"_head"
+
+    return render_to_response ( "careers.html", locals() )
 
 

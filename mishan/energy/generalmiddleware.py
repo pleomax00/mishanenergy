@@ -9,7 +9,6 @@ class GeneralMiddleware(object):
 
         host = request.META.get ( "HTTP_HOST", "digisalts.com" )
         if host in settings.REDIRECTION_RULES[0]:
-            print host
             return HttpResponseRedirect ( "http://" + settings.REDIRECTION_RULES[1] )
 
         request.MENU = settings.MENU
