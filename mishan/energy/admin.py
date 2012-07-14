@@ -157,6 +157,7 @@ def changepassword (request):
 @login_required
 def textstrings (request):
     """ Change web sites text strings """
+    title = "Change website text"
     if not request.user.is_staff:
         return HttpResponseRedirect ("/auth/login?msg=noperm")
     textpath = os.path.join (settings.MARK_DOWN)
