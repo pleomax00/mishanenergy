@@ -1,8 +1,6 @@
 {% extends 'admin/master.html' %}
 
-{% block title %}Create or Edit Emails{% endblock %}
-
-{% block maincontents %}
+{% block main %}
     {% ifequal request.GET.msg 'success' %}
         <p class="success">Successfully created E-mail address: {{request.GET.email}} </p>
     {% endifequal %}
@@ -11,7 +9,7 @@
     {% endifequal %}
     <h2> Create a new email address </h2>
     <form method="post">
-        <table border="0">
+        <table border="0" class="atable">
             {{eform.as_table}}
             <tr>
                 <td></td>

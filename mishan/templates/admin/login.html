@@ -1,15 +1,15 @@
 {% extends 'admin/master.html' %}
 
-{% block maincontents %}
+{% block main %}
     {% if request.GET.next %}
-    <p> Please Log In </p>
+    <p class="error"> Please login first </p>
     {% endif %}
     {% ifequal request.GET.msg "noperm" %}
     <p class="error">You don't have permission to visit this page, please log in with a user that has the necessary permissions.</p>
     {% endifequal %}
     <form method="post">
         <input type="hidden" name="next" value="{{request.GET.next}}" />
-        <table border="0">
+        <table border="0" class="atable">
             <tr>
                 <td>Login: </td>
                 <td><input type="text" name="login" /></td>

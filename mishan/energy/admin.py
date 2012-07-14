@@ -52,6 +52,7 @@ class EmailRegForm (forms.Form):
 #@login_required
 def index (request):
     """ serves /admin """
+    title = "Menu"
 #    if request.email not in settings.LINE_MANAGERS:
 #        raise Http404
     return render_to_response ("admin/index.html", locals())
@@ -60,6 +61,7 @@ def index (request):
 @login_required
 def createmail (request):
     """ serves /admin/createmail """
+    title = "Create or Edit Users"
     if request.method == "POST":
         eform = EmailRegForm (request.POST)
         if eform.is_valid ():
@@ -121,6 +123,7 @@ def deletemail (request, iid):
 
 def changepassword (request):
     """ Changes the password """
+    title = "Change Password"
     if request.method == "POST":
         email = request.POST.get ('email', '')
         old = request.POST.get ('old', '')
@@ -177,6 +180,7 @@ def settextstring (request):
 @login_required
 def editnews (request):
     """ News editor """
+    title = "News Editor"
     if not request.user.is_staff:
         return HttpResponseRedirect ("/auth/login?msg=noperm")
     if request.method == "POST":
@@ -187,6 +191,7 @@ def editnews (request):
             n = News (news = news, date = when)
             n.save ()
             nform = NewsForm ()
+            return HttpResponseRedirect ("/admin/news?msg=saved")
     else:
         nform = NewsForm ()
 
@@ -204,6 +209,7 @@ def removenews (request, iid):
 
 def loginpage (request):
     """ Serves login page """
+    title = "Login to Mishan Energy"
     if request.method == "POST":
         login = request.POST.get ("login", "")
         password = request.POST.get ("password", "")

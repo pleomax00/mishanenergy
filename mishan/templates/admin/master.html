@@ -1,19 +1,48 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-    <head>
-        <title>{% block title %}Listing{% endblock %} | Admin</title>
+{% extends 'master.html' %}
+{% load core_tags %}
 
+{% block title %}{{title}} | Admin {% endblock %}
+
+{% block extraincludes %}
         <style type="text/css">@import '/static/css/admin.css';</style>
-        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
         <script type="text/javascript" src="/static/js/updatetext.js"></script>
-    </head>
+{% endblock %}
 
-    <body>
-        <div class="maincontents">
+{% block headerinfo %}
             {% if request.user.is_authenticated %}
-            <div class="right">Welcome: {{request.user.first_name}} (<a href="/auth/logout">Logout</a>)</div>
+            Welcome: {{request.user.first_name}} (<a href="/auth/logout">Logout</a>)
             {% endif %}
-            {% block maincontents %}{% endblock %}
+{% endblock %}
+
+{% block maincontents %}
+        <!-- BEGIN OF HEADER IMAGE -->
+        <div id="headerimage-container">
+            <div id="headerimage-top"></div>
+            <div id="headerimage">
+                <div class="headerimage-dot"></div>
+                <img src="/static/images/page-title3.jpg" alt="" /> 
+            </div>
+            <div id="headerimage-bottom"></div>
         </div>
-    </body>
-</html>
+        <!-- END OF HEADER IMAGE -->
+
+        <!-- BEGIN OF CONTENT -->
+        <div id="content">
+        	<div class="maincontent-inner">
+            	
+                <!-- begin of pagetitle --> 
+                <div class="pagetitle">
+                    <h3>{{title}}</h3>
+                    <p><a href="/admin">&lt;&lt;Back to Admin Menu</a></p>
+                </div>
+                <!-- end of front slogan --> 
+
+                <div class="col-1">
+                    {% block main %}Not Implemented{% endblock %}
+                </div>
+                
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- END OF CONTENT -->
+{% endblock %}

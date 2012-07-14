@@ -1,8 +1,10 @@
 {% extends 'admin/master.html' %}
 
-{% block maincontents %}
+{% block main %}
+    {% ifequal request.GET.action 'removed' %} <p class="success">Removed that news!</p> {% endifequal %}
+    {% ifequal request.GET.msg 'saved' %} <p class="success">News added!</p> {% endifequal %}
     <form method="post">
-        <table border="0">
+        <table border="0" class="atable">
             {{nform.as_table}}
 
             <tr>
