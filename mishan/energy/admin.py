@@ -10,6 +10,7 @@ from django.forms.extras.widgets import SelectDateWidget
 import xmlrpclib, os
 from mishan.energy.models import *
 import hashlib
+from django.contrib.auth import authenticate, login as djangologin, logout as djangologout, get_backends
 
 class NewsForm (forms.Form):
     news_text = forms.CharField (label = "News Text", max_length = 100, widget=forms.Textarea)
@@ -25,7 +26,7 @@ class EmailRegForm (forms.Form):
 
     def clean_master_password (self):
         passwd = self.cleaned_data.get ('master_password')
-        if passwd != hashlib.md5 (settings.MASTER_PASSWORD).hexdigest():
+        if settings.MASTER_PASSWORD != hashlib.md5 (passwd).hexdigest():
             raise forms.ValidationError ("To create a new user, you need to provide valid master password.")
 
     def clean_retype_password (self):
@@ -56,6 +57,7 @@ def index (request):
     return render_to_response ("admin/index.html", locals())
 
 
+@login_required
 def createmail (request):
     """ serves /admin/createmail """
     if request.method == "POST":
@@ -77,10 +79,11 @@ def createmail (request):
             #session_id, account = server.login (settings.WEBFACTION_USER, settings.WEBFACTION_PASSWORD)
 
             emailname = email.split ("@")[0]
-            os.system ("sudo useradd %s" %(emailname))
-            os.system ("echo '%s:%s' | sudo chpasswd" % (emailname, password))
-            os.system ("sudo mkdir /home/%s" %(emailname))
-            os.system ("sudo chown -R %s:%s /home/%s" %(emailname, emailname, emailname))
+            if settings.MODE == "PRODUCTION":
+                os.system ("sudo useradd %s" %(emailname))
+                os.system ("echo '%s:%s' | sudo chpasswd" % (emailname, password))
+                os.system ("sudo mkdir /home/%s" %(emailname))
+                os.system ("sudo chown -R %s:%s /home/%s" %(emailname, emailname, emailname))
             #response = server.create_mailbox (session_id, emailname, False)
             #resp = server.create_email (session_id, email, emailname)
 
@@ -91,6 +94,7 @@ def createmail (request):
     users = User.objects.all ()
     return render_to_response ("admin/createmail.html", locals())
 
+@login_required
 def deletemail (request, iid):
     u = User.objects.get (id = iid)
     
@@ -107,8 +111,9 @@ def deletemail (request, iid):
 
     email = u.email
     emailname = email.split ("@")[0]
-    os.system ("sudo userdel %s" %(emailname))
-    os.system ("sudo mv /home/%s /home/ubuntu/backup/delusers" % (emailname))
+    if settings.MODE == "PRODUCTION":
+        os.system ("sudo userdel %s" %(emailname))
+        os.system ("sudo mv /home/%s /home/ubuntu/backup/delusers" % (emailname))
 
     u.delete()
     return HttpResponseRedirect ('/admin/createmail?msg=deleted&email=' + email)
@@ -139,20 +144,27 @@ def changepassword (request):
         u.set_password (new1)
         u.save ()
         emailname = u.email.split ("@")[0]
-        os.system ("echo '%s:%s' | sudo chpasswd" % (emailname, new1))
+        if settings.MODE == "PRODUCTION":
+            os.system ("echo '%s:%s' | sudo chpasswd" % (emailname, new1))
         return HttpResponseRedirect ('/admin/changepassword?msg=success')
 
     return render_to_response ("admin/changepassword.html", locals())
 
 
+@login_required
 def textstrings (request):
     """ Change web sites text strings """
+    if not request.user.is_staff:
+        return HttpResponseRedirect ("/auth/login?msg=noperm")
     textpath = os.path.join (settings.MARK_DOWN)
     files = filter (lambda x: x.endswith ('.txt'), os.listdir (textpath))
     return render_to_response ("admin/textstrings.html", locals())
 
+@login_required
 def settextstring (request):
     """ Save a file """
+    if not request.user.is_staff:
+        return HttpResponseRedirect ("/auth/login?msg=noperm")
     textpath = os.path.join (settings.MARK_DOWN, request.POST.get ('file'))
     if not textpath.endswith (".txt"):
         textpath += ".txt"
@@ -162,8 +174,11 @@ def settextstring (request):
     return HttpResponse ("{}")
 
 
+@login_required
 def editnews (request):
     """ News editor """
+    if not request.user.is_staff:
+        return HttpResponseRedirect ("/auth/login?msg=noperm")
     if request.method == "POST":
         nform = NewsForm (request.POST)
         if nform.is_valid ():
@@ -179,6 +194,7 @@ def editnews (request):
     return render_to_response ("admin/newsedit.html", locals ())
 
 
+@login_required
 def removenews (request, iid):
     """ Remove a news """
     n = News.objects.get (id = iid)
@@ -191,8 +207,30 @@ def loginpage (request):
     if request.method == "POST":
         login = request.POST.get ("login", "")
         password = request.POST.get ("password", "")
+        print login, password
         if login == "" or password == "":
             return HttpResponseRedirect ("/auth/login?error=allfields&next=" + request.POST.get('next','/admin'))
+        user = authenticate ( username = login, password = password )
+        print user
+        if user is not None:
+            djangologin (request, user)
+            return HttpResponseRedirect (request.GET.get ("next", "/admin"))
+        print user
     return render_to_response ("admin/login.html", locals())
 
 
+def logout (request):
+    djangologout (request)
+    return HttpResponseRedirect ("/admin")
+
+@login_required
+def staff (request, action, uid):
+    if not request.user.is_staff:
+        return HttpResponseRedirect ("/auth/login?msg=noperm")
+    u = User.objects.get (id = uid)
+    if action == "staff":
+        u.is_staff = True
+    else:
+        u.is_staff = False
+    u.save ()
+    return HttpResponseRedirect ("/admin/createmail")

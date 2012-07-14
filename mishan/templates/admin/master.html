@@ -10,6 +10,9 @@
 
     <body>
         <div class="maincontents">
+            {% if request.user.is_authenticated %}
+            <div class="right">Welcome: {{request.user.first_name}} (<a href="/auth/logout">Logout</a>)</div>
+            {% endif %}
             {% block maincontents %}{% endblock %}
         </div>
     </body>

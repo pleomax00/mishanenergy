@@ -68,3 +68,10 @@ table.admintable tr th {
 .textname {
     width: 100px;
 }
+.right {
+    float: right;
+}
+.error {
+    color: red;
+    text-align: center;
+}

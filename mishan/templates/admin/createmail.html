@@ -27,7 +27,10 @@
             <th>User's Name</th>
             <th>Email Address</th>
             <th>Alternate Address</th>
+            <th>Admin</th>
+            {% if request.user.is_staff %}
             <th>Actions</th>
+            {% endif %}
         </tr>
         {% for u in users %}
         <tr>
@@ -35,7 +38,16 @@
             <td class="center">{{u.first_name}}</td>
             <td class="center">{{u.email}}</td>
             <td class="center">{{u.last_name}}</td>
+            <td class="center">
+            {% if request.user.is_staff %}
+                {% if u.is_staff %}<a href="/admin/unstaff/{{u.id}}">remove admin</a>{% else %}<a href="/admin/staff/{{u.id}}">make admin</a>{% endif %}
+            {% else %}
+                {% if u.is_staff %}yes{% else %}no{% endif %}
+            {% endif %}
+            </td>
+            {% if request.user.is_staff %}
             <td class="center"><a href='/admin/mail/delete/{{u.id}}'>(delete)</a></td>
+            {% endif %}
         </tr>
         {% endfor %}
     </table>
