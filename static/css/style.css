@@ -584,7 +584,7 @@ p#vtip{
 	width:1090px;
 	height:348px;
 	top:48px;
-	background-image:url(../images/slide-dot.png);
+	/*background-image:url(../images/slide-dot.png);*/
 	background-repeat:repeat;
 	position:absolute;
 	z-index:80;
@@ -699,7 +699,7 @@ p#vtip{
 	width:1090px;
 	height:535px;
 	top:0px;
-	background-image:url(../images/slide-dot.png);
+	/*background-image:url(../images/slide-dot.png);*/
 	background-repeat:repeat;
 	position:absolute;
 	z-index:80;
