@@ -4,7 +4,7 @@
 ------------------------------------------------------*/
 
 body{
-	font-family:Verdana,Arial,Georgia;
+	font-family:calibri,Verdana,Arial,Georgia;
 	font-size:13px;
 	color:black;
 	line-height:22px;
@@ -62,7 +62,7 @@ hr {
 strong{color:#757575;}
 .highlighttext{
 	font-size:13px;
-	font-family:Georgia,Verdana,Tahoma;
+	font-family:calibri,Georgia,Verdana,Tahoma;
 	color:black;
 	line-height:24px;
 	margin-bottom:28px;
@@ -358,12 +358,12 @@ ol li{
 }
 
 /* Heading */
-h1{font-family:'Ubuntu',Arial,Tahoma,Verdana;font-size:34px;color:#2d2d2d;margin-bottom:15px;line-height:34px;letter-spacing:-1px;}
-h2{font-family:'Ubuntu',Arial,Tahoma,Verdana;font-size:30px;color:#2d2d2d;margin-bottom:15px;line-height:32px;letter-spacing:-1px;}
-h3{font-family:'Ubuntu',Arial,Tahoma,Verdana;font-size:28px;color:#2d2d2d;margin-bottom:15px;line-height:30px;letter-spacing:-1px;}
-h4{font-family:'Ubuntu',Arial,Tahoma,Verdana;font-size:24px;color:#2d2d2d;margin-bottom:15px;line-height:28px;letter-spacing:-1px;}
-h5{font-family:'Ubuntu',Arial,Tahoma,Verdana;font-size:20px;color:#2d2d2d;margin-bottom:15px;line-height:24px;letter-spacing:-1px;}
-h6{font-family:'Ubuntu',Arial,Tahoma,Verdana;font-size:18px;color:#2d2d2d;margin-bottom:15px;line-height:18px;letter-spacing:-1px;}
+h1{font-family:'calibri',Arial,Tahoma,Verdana;font-size:34px;color:#2d2d2d;margin-bottom:15px;line-height:34px;letter-spacing:-1px;}
+h2{font-family:'calibri',Arial,Tahoma,Verdana;font-size:30px;color:#2d2d2d;margin-bottom:15px;line-height:32px;letter-spacing:-1px;}
+h3{font-family:'calibri',Arial,Tahoma,Verdana;font-size:28px;color:#2d2d2d;margin-bottom:15px;line-height:30px;letter-spacing:-1px;}
+h4{font-family:'calibri',Arial,Tahoma,Verdana;font-size:24px;color:#2d2d2d;margin-bottom:15px;line-height:28px;letter-spacing:-1px;}
+h5{font-family:'calibri',Arial,Tahoma,Verdana;font-size:20px;color:#2d2d2d;margin-bottom:15px;line-height:24px;letter-spacing:-1px;}
+h6{font-family:'calibri',Arial,Tahoma,Verdana;font-size:18px;color:#2d2d2d;margin-bottom:15px;line-height:18px;letter-spacing:-1px;}
 
 /* Text Styled */
 .boldtext-medium{font-size:14px; font-weight:bold; color:#c6c6c6}
@@ -408,7 +408,7 @@ p#vtip{
 	top:1px;
 }
 .button span {
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-weight:bold;
 	text-transform:uppercase;
 	position: relative;
@@ -612,7 +612,7 @@ p#vtip{
 	float:right;
 }
 #mainmenu ul{
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-weight:bold;
 	font-size:15px;
 	letter-spacing:-1px;
@@ -832,7 +832,7 @@ p#vtip{
 .front-slogan p{
 	width:778px;	
 	font-size:17px;
-	font-family:Georgia,Verdana,Tahoma;
+	font-family:calibri,Georgia,Verdana,Tahoma;
 	margin:0px auto 25px auto;
 }
 .front-box{
@@ -862,7 +862,7 @@ p#vtip{
 }
 .front-logo p{
 	margin:17px 0px 1px 0px;
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-size:12px;
 	color:#b2b2b2;
 	text-align:center;
@@ -917,7 +917,7 @@ ul.latest-list li .date-news{
 	background-image:url(../images/news-dot.png);
 	background-position:right;
 	background-repeat:repeat-y;
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-weight:bold;
 	font-size:18px;
 	line-height:18px;
@@ -1184,7 +1184,7 @@ ul.whatwedo-list li img{
 	height:235px;
 }
 ul.whatwedo-list li p{
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-weight:bold;
 	font-size:18px;
 	color:#ffffff;
@@ -1233,7 +1233,7 @@ ul.testimonials-list li p{
 .serv-desc{
 	width:355px;
 	background-color:#ffffff;
-	padding:18px 25px 2px 25px;
+	padding: 5px 10px 2px;
 	margin:0px 0px 10px 0px;
 	border-top:1px solid #d0d1d1;
 	float:left;
@@ -1435,7 +1435,7 @@ ul#portfolio-filter li{
 	margin-right:10px; 
 }
 ul#portfolio-filter a{
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-weight:bold;
 	letter-spacing:-1px;
 	color:#ffffff;
@@ -1450,7 +1450,7 @@ ul#portfolio-filter a{
 	border-radius: 90px;
 }
 ul#portfolio-filter a.current{
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	letter-spacing:-1px;
 	color:#ffffff;
 	padding:10px 22px 12px 22px;
@@ -1686,13 +1686,13 @@ ul#portfolio-list-4col li img{
 }
 .testi-content blockquote{
 	color:#868686;
-	font-family:Georgia, "Times New Roman", Times, serif;
+	font-family:calibri,Georgia, "Times New Roman", Times, serif;
 	font-size:16px;
 	line-height:24px;
 	background-image:none;
 }
 .testi-people-left .p-name{
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-weight:bold;
 	font-size:16px;
 	color:#2d2d2d;
@@ -1703,7 +1703,7 @@ ul#portfolio-list-4col li img{
 	margin-bottom:-3px;
 }
 .testi-people-right .p-name{
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-weight:bold;
 	font-size:16px;
 	text-align:right;
@@ -1913,7 +1913,7 @@ ul#portfolio-list-4col li img{
 }
 .twitted ul#twitter_update_list li {
 	width:246px;
-	font-family:Georgia, "Times New Roman", Times, serif;
+	font-family:calibri,Georgia, "Times New Roman", Times, serif;
 	font-style:italic;
 	font-size:16px;
 	line-height:28px;
@@ -1968,7 +1968,7 @@ ul#portfolio-list-4col li img{
 	color:#a8a8a8;
 }
 #search .sub-button, #search-error .sub-button{
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-weight:bold;
 	letter-spacing:-1px;
 	color:#ffffff;
@@ -2295,7 +2295,7 @@ ul.sharesocial-bloglist-left li a{
 .comment-text{ margin-left:100px; width:auto; border-bottom:solid 1px #dcdcdc;  padding:0px 0px 5px 0px; margin-bottom:10px;}
 .reply{
 	margin-top:-5px;
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-weight:bold;
 	letter-spacing:-1px;
 	color:#ffffff;
@@ -2524,7 +2524,7 @@ label{
 	float:left;
 }
 .buttoncontact{
-	font-family:'Ubuntu',Arial,Tahoma,Verdana;
+	font-family:'calibri',Arial,Tahoma,Verdana;
 	font-weight:bold;
 	letter-spacing:-1px;
 	color:#ffffff;
@@ -2597,4 +2597,8 @@ label{
     text-align: center;
 }
 
+.imgleft {
+    float: left;
+    padding: 5px;
+}
 

@@ -34,6 +34,7 @@
                     {% ifequal request.GET.error "filesize" %}
                     <p class="red">Oops! The file is too big, your resume must be less than 10 MB (thats a generous limit)</p>
                     {% endifequal %}
+                    <img src="/static/images/careers_left.png" class="imgleft" />
                     {{pagetext|snippet}}
                     <form method="post" enctype="multipart/form-data" class="resumeform">
                         <p>Upload your resume (pdf, doc, docx, or odt):</p>
