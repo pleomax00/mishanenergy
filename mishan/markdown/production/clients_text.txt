@@ -1,0 +1,83 @@
+#nobr
+<div class="table-cyan">
+<table class="table">
+
+<thead>
+<Tr>
+<Th><b>No.</b></Th>
+<Th><b>Client Name</b></Th>
+</Tr>
+</thead>
+
+<tbody>
+<Tr>
+<Td WIDTH="50">1.</TD>
+<Td WIDTH="300">Balrampur chinni mills</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">2.</TD>
+<Td WIDTH="300">Wave industries</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">3.</TD>
+<Td WIDTH="300">Shah Sponge</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">4.</TD>
+<Td WIDTH="300">JITF Ecopolis, Okhla</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">5.</TD>
+<Td WIDTH="300">Nawanshahar Power Project Ltd</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">6.</TD>
+<Td WIDTH="300">India Globus Behrur</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">7.</TD>
+<Td WIDTH="300">Bajaj Hindustan</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">8.</TD>
+<Td WIDTH="300">Best Foods Karnal</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">9.</TD>
+<Td WIDTH="300">Chamundi Captive Power Project Ltd</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">10.</TD>
+<Td WIDTH="300">A2Z Power Com Ltd</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">11.</TD>
+<Td WIDTH="300">Himachal Enviro</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">12.</TD>
+<Td WIDTH="300">Upper Ganges Sugar Ltd</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">13.</TD>
+<Td WIDTH="300">Triveni</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">14.</TD>
+<Td WIDTH="300">Dhruvdesh Metasteels</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">15.</TD>
+<Td WIDTH="300">Dangote Sugar Refinery</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">16.</TD>
+<Td WIDTH="300">Maa Kaali Power project Chattisgarh</TD>
+</Tr>
+<Tr>
+<Td WIDTH="50">17.</TD>
+<Td WIDTH="300">Haryana Cooperative Sugar</TD>
+</Tr>
+</tbody>
+</table>
+</div>
