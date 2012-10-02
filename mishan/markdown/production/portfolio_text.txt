@@ -1,5 +1,5 @@
 #nobr
-<div class="table-cyan">
+<div class="table-yellow">
         <table class="table">
         <thead>
 <Tr>
