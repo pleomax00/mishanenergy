@@ -574,7 +574,7 @@ p#vtip{
 }
 #headerimage{
 	width:1090px;
-	height:381px;
+	height:403px;
 	margin:0px auto;
 }
 #headerimage img{
@@ -2602,3 +2602,35 @@ label{
     padding: 5px;
 }
 
+.table-mishan {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-mishan thead th {
+    background: #eee;
+    border: 1px solid #ccc;
+   background-image:    -moz-linear-gradient(top, #fafafa, #eee); 
+   background-image:    -webkit-linear-gradient(top, #fafafa, #eee); 
+   background-image:    -ms-linear-gradient(top, #fafafa, #eee); 
+   background-image:    -o-linear-gradient(top, #fafafa, #eee); 
+   background-image:    linear-gradient(top, #fafafa, #eee); 
+
+}
+
+.table-mishan tbody td {
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.table-mishan .col1 {
+    width: 100px;
+    text-align: center;
+}
+
+.table-mishan tr td, .table-mishan tr th {
+    padding: 1px 5px;
+}
+.facilitypoint {
+    margin-bottom: 5px;
+    font-size: 106%;
+}
