@@ -1,6 +1,6 @@
 #nobr
 <div class="table-yellow">
-        <table class="table">
+        <table class="table-mishan">
         <thead>
 <Tr>
 <Th><b>No.</b></TD>

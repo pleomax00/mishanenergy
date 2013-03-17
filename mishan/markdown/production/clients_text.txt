@@ -78,6 +78,18 @@
                 <td class="col1">17.</td>
                 <td>Haryana Cooperative Sugar</td>
             </tr>
+            <tr>
+                <td class="col1">18.</td>
+                <td>Tekpro</td>
+            </tr>
+            <tr>
+                <td class="col1">19.</td>
+                <td>ABS Foods</td>
+            </tr>
+            <tr>
+                <td class="col1">20.</td>
+                <td>Grashim Textile Industries</td>
+            </tr>
         </tbody>
     </table>
 </div>
