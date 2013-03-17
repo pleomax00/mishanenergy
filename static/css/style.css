@@ -734,31 +734,23 @@ p#vtip{
 	z-index:908;	
 }
 .slide-text{
-	width:490px;
-	margin:174px 0px 0px -65px;
-	padding-bottom:25px;
+	width:900px;
+	margin:344px 0px 0px -64px;
 	background-image:url(../images/bg-tranparent.png);
 	background-repeat:repeat;
-	-webkit-border-top-right-radius: 14px;
-	-webkit-border-bottom-right-radius: 14px;
-	-moz-border-radius-topright: 14px;
-	-moz-border-radius-bottomright: 14px;
-	border-top-right-radius: 14px;
-	border-bottom-right-radius: 14px;
-	float:left;
 }
 .slide-text h1{
 	width:388px;
-	font-size:38px;
-	margin:23px 0px 11px 79px;
+	font-size:24px;
+	margin:23px 0px 1px 30px;
 	text-shadow:0px 1px 0px #000000;
 	color:#ffffff;
 }
 .slide-text p{
 	width:360px;
 	font-family:Arial,Tahoma,Verdana;
-	font-size:18px;
-	margin:0px 0px 16px 79px;
+	font-size:14px;
+	margin:0px 0px 16px 30px;
 	text-shadow:0px 1px 0px #000000;
 	color:#ffffff;
 }
@@ -2633,4 +2625,8 @@ label{
 .facilitypoint {
     margin-bottom: 5px;
     font-size: 106%;
+}
+
+#menu > li > a {
+    text-transform: uppercase;
 }

@@ -178,7 +178,7 @@ LOGGING = {
 }
 
 MENU = (
-    ("", "Home"),
+    ("", "HOME"),
     ("aboutus", "About Us"),
     ("services", "Services"),
     ("newsnevents", "News & Events"),

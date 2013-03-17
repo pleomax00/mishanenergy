@@ -1,12 +1,12 @@
 <p align= "justify">Mishan Energy Solutions is a Team of senior Power Plant Professionals having vast and varied experience in Design, Manufacturing, Erection, Commissioning, Operation & Maintenance, Trouble Shooting, Residual Life Assessment, Retrofitting & Revamping, Capacity Enhancement, Relocation, Energy Audit and various other activities related to Power Plants.
 The Company has been formed with a goal to provide Single Window Solutions from Concept-To-Commissioning for Power Plants including power Trading and availing/fulfilling related benefits/ obligations such as Renewable Energy Certificates.
 
-<h> <b> Vision </b> </h>
+<h3> <b> Vision </b> </h3>
 
 To be the most admired and responsible integrated Engineering Service Provider to Power Companies with a global footprint, delivering sustainable value. Become Global leading Engineering and Construction firm while delivering projects that consistently meet international standards
 Possess a team of qualified and motivated professionals with cross functional expertise, skills in project and construction management, design, engineering, and power plant operation and maintenance.
 
-<h> <b> Mission </b> <h>
+<h3> <b> Mission </b> </h3>
 
 -Ensuring customer satisfaction, trust and integrity by delivering quality products and services conforming to industry best practices.
 -To be a high-performance, sought after Professional Organization that exceeds all customer expectations.
