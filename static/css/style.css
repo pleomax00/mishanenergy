@@ -2592,6 +2592,8 @@ label{
 .imgleft {
     float: left;
     padding: 5px;
+}
+.serv-desc > .imgleft {
     width: 150px;
 }
 
