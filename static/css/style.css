@@ -17,8 +17,8 @@ body{
 
 /* links */
 a, a:visited{
-	color:#444;
-	text-decoration:none;
+	color:#333;
+	text-decoration:underline;
 }
 a:hover{
 	color:#777; 
