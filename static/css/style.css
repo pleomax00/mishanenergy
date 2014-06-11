@@ -2633,3 +2633,12 @@ label{
 #menu > li > a {
     text-transform: uppercase;
 }
+
+.esi {
+    margin-bottom: 20px;
+}
+.esi img {
+    padding: 0 5px;
+}
+
+

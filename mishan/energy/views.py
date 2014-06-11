@@ -66,6 +66,15 @@ def genericpage (request, page):
     image = page+"_head"
     return render_to_response ( "genericpage.html", locals() )
 
+def labourlicense (request, page):
+    """ Serves a generic page """
+    title = page.capitalize ()
+    titlename = page+"_h2"
+    titledesc = page+"_minidesc"
+    pagetext = page+"_text"
+    image = "portfolio_head"
+    return render_to_response ( "labourlicense.html", locals() )
+
 
 def careers (request):
     """ Serves a generic page """
