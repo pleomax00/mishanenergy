@@ -63,7 +63,10 @@ def genericpage (request, page):
     titlename = page+"_h2"
     titledesc = page+"_minidesc"
     pagetext = page+"_text"
-    image = page+"_head"
+    if(page == "documents" ):
+        image = "portfolio_head"
+    else:
+        image = page+"_head"
     return render_to_response ( "genericpage.html", locals() )
 
 def labourlicense (request, page):
