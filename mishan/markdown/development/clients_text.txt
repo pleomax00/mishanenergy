@@ -10,85 +10,129 @@
         </thead>
 
         <tbody>
+			<tr>
+                <td class="col-comptype"></td>
+				<td class="col-comptype">Domestic</td>
+                </tr>
             <tr>
                 <td class="col1">1.</td>
-                <td>Balrampur Chinni Mills</td>
+                <td>M/s Alstom India</td>
             </tr>
             <tr>
                 <td class="col1">2.</td>
-                <td>Wave Industries</td>
+                <td>M/s ACC Gagal, India</td>
             </tr>
             <tr>
                 <td class="col1">3.</td>
-                <td>Shah Sponge</td>
+                <td>M/s A2Z Power Com Ltd, India</td>
             </tr>
-            <tr>
+			<tr>
                 <td class="col1">4.</td>
-                <td>Jitf Ecopolis, Okhla</td>
+                <td>M/s Balrampur Chini Mills</td>
             </tr>
             <tr>
                 <td class="col1">5.</td>
-                <td>Nawanshahar Power Project Ltd</td>
+                <td>M/s Bajaj Hindustan</td>
             </tr>
             <tr>
                 <td class="col1">6.</td>
-                <td>India Globus Behrur</td>
+                <td>M/s Best Foods Karnal</td>
             </tr>
-            <tr>
+			<tr>
                 <td class="col1">7.</td>
-                <td>Bajaj Hindustan</td>
+                <td>M/s Bajaj Energy</td>
             </tr>
             <tr>
                 <td class="col1">8.</td>
-                <td>Best Foods Karnal</td>
+                <td>M/s Chamundi Captive Power Project Ltd, Karnataka</td>
             </tr>
             <tr>
                 <td class="col1">9.</td>
-                <td>Chamundi Captive Power Project Ltd</td>
+                <td>M/s Cheema Boiler</td>
             </tr>
             <tr>
                 <td class="col1">10.</td>
-                <td>A2Z Power Com Ltd</td>
+                <td>M/s Dangote Sugar Refinery, Nigeria</td>
             </tr>
             <tr>
                 <td class="col1">11.</td>
-                <td>Himachal Enviro</td>
+                <td>M/s Grasim Textile Industries, Bhiwani</td>
             </tr>
             <tr>
                 <td class="col1">12.</td>
-                <td>Upper Ganges Sugar Ltd</td>
+                <td>M/s Gemco Controls</td>
             </tr>
             <tr>
                 <td class="col1">13.</td>
-                <td>Triveni</td>
+                <td>M/s Hasanpur Sugar Mills</td>
             </tr>
             <tr>
                 <td class="col1">14.</td>
-                <td>Dhruvdesh Metasteels</td>
+                <td>M/s India Globus Behrur</td>
             </tr>
             <tr>
-                <td class="col1">15.</td>
-                <td>Dangote Sugar Refinery</td>
+                <td class="col1">15..</td>
+                <td>M/s Jindal Ecopolis, Okhla, Delhi</td>
             </tr>
             <tr>
                 <td class="col1">16.</td>
-                <td>Maa Kaali Power Project Chattisgarh</td>
+                <td>M/s KIC Durgapur</td>
             </tr>
             <tr>
                 <td class="col1">17.</td>
-                <td>Haryana Cooperative Sugar</td>
+                <td>M/s L&T (MMI)</td>
             </tr>
             <tr>
                 <td class="col1">18.</td>
-                <td>Tekpro</td>
+                <td>M/s L&T Power</td>
             </tr>
-            <tr>
+             <tr>
                 <td class="col1">19.</td>
-                <td>ABS Foods</td>
+                <td>M/s Nawanshahar Power Project Ltd, Punjab</td>
+            </tr>
+			<tr>
+                <td class="col1">20.</td>
+                <td>M/s Shah Sponge Tata Nagar</td>
             </tr>
             <tr>
-                <td class="col1">20.</td>
-                <td>Grashim Textile Industries</td>
+                <td class="col1">21.</td>
+                <td>M/s Triveni Industries</td>
+            </tr>
+            <tr>
+                <td class="col1">22.</td>
+                <td>M/s Techpro, Chennai</td>
+            </tr>
+            <tr>
+                <td class="col1">23.</td>
+                <td>M/s Upper Ganges Sugar Ltd (Group of Birla Sugar)</td>
+            </tr>
+            <tr>
+                <td class="col1">24.</td>
+                <td>M/s Wave Industries</td>
+            </tr>
+			<tr>
+                <td class="col-comptype"></td>
+				<td class="col-comptype">Export</td>
+                </tr>
+            <tr>
+                <td class="col1">1.</td>
+                <td>M/s Ban Rai Sugar Co Ltd - Thailand</td>
+            </tr>
+            <tr>
+                <td class="col1">2.</td>
+                <td>M/s Ban Rai Sugar Co Ltd - Myanmar</td>
+            </tr>
+            <tr>
+                <td class="col1">3.</td>
+                <td>M/s Dangota Sugar Refinery - Nigeria</td>
+            </tr>
+            <tr>
+                <td class="col1">4.</td>
+                <td>M/s Himalaya Sugar - Nepal</td>
+            </tr>
+            <tr>
+                <td class="col1">5.</td>
+                <td>M/s Uttam Sucrotech - Columbia</td>
             </tr>
         </tbody>
     </table>

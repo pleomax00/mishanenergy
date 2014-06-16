@@ -4,85 +4,45 @@
         <thead>
 <Tr>
 <Th><b>No.</b></TD>
-<Th><b>Customer</b></TD>
 <Th><b>Area of Business</b></TD>
+<Th><b>Clients</TD>
 </Tr>
 </thead>
 <tbody>
 <Tr>
 <Td WIDTH="50">1.</TD>
-<Td WIDTH="300">Wave Industries, Amroha</TD>
-<Td WIDTH="600">Boiler Retrofit & Up-gradation</TD>
+<Td WIDTH="300">Modification of CFBC Boiler for Multi Bio-Mass Fuel & RDF</TD>
+<Td WIDTH="600">M/s A2Z Maintenance & Engineering Services - Nakodar & Fazilka, A2Z Infrastructure Limited - Kanpur</TD>
 </Tr>
 <Tr>
 <Td WIDTH="50">2.</TD>
-<Td WIDTH="300">Balrampur Chini Mills</TD>
-<Td WIDTH="600">Superheater Modification & Up-gradation</TD>
+<Td WIDTH="300">Capacity Enhancement of Boiler</TD>
+<Td WIDTH="600">M/s Balrampur Chinni Mills, Bajaj Hindustan Limited - Utraula & Gola, Triveni Engineering & Industries Limited - Sabitgarh,
+Upper Ganges Sugar & Industries Ltd - Seohara, Wave Industries Pvt Ltd - Amroha</TD>
 </Tr>
 <Tr>
 <Td WIDTH="50">3.</TD>
-<Td WIDTH="300">Shah Sponge, Tatanagar</TD>
-<Td WIDTH="600">HP Piping - Design & Erection - 15 MW Power Plant</TD>
+<Td WIDTH="300">Conversion of Travelling Grate Boiler to ABFC type Boiler</TD>
+<Td WIDTH="600">M/s A.B. Sugars Limited - Dasuya</TD>
 </Tr>
 <Tr>
 <Td WIDTH="50">4.</TD>
-<Td WIDTH="300">Mahakali Power</TD>
-<Td WIDTH="600">HP Piping - Design & Erection - 15 MW Power Plant</TD>
+<Td WIDTH="300">Efficiency Improvement & Retrofitting</TD>
+<Td WIDTH="600">M/s Dangote Sugar Refinery - Nigeria, Grasim Bhiwani Textile Limited, PBS Foods (Sugar) Pvt Ltd - Chandpur, Sharaung Sugar Co Ltd - Thailand, 
+ Wave Industries Pvt Ltd - Dhanaura</TD>
 </Tr>
 <Tr>
 <Td WIDTH="50">5.</TD>
-<Td WIDTH="300">Nawanshahar Power Project</TD>
-<Td WIDTH="600">Project Management of 20 MW Co-Gen Plant</TD>
+<Td WIDTH="300">Operation & Maintenance of Power Plants</TD>
+<Td WIDTH="600">M/s Associated Cement Companies Ltd - Barmana, GLobus Spirits Limited - Behrur, JITF Ecopolis, KIC Durgapur, L&T MHI Boiler, 
+Shri Chamundi Captive Energy Pvt Ltd</TD>
 </Tr>
 <Tr>
 <Td WIDTH="50">6.</TD>
-<Td WIDTH="300">Best Foods Limited</TD>
-<Td WIDTH="600">Civil Design & Engineering of 6 MW Plant</TD>
-</Tr>
-<Tr>
-<Td WIDTH="50">7.</TD>
-<Td WIDTH="300">Shyam DRI, Jharsuguda</TD>
-<Td WIDTH="600">Resolving Operaional problems of 135 TPH AFBC Boiler</TD>
-</Tr>
-<Tr>
-<Td WIDTH="50">8.</TD>
-<Td WIDTH="300">Ban Rai Sugar Co. Ltd., Thailand</TD>
-<Td WIDTH="600">Resolving Operaional problems of 200 TPH Travelling Grate Boiler</TD>
-</Tr>
-<Tr>
-<Td WIDTH="50">9.</TD>
-<Td WIDTH="300">Sharaung Sugar Co. Ltd., Thailand</TD>
-<Td WIDTH="600">Resolving Operaional problems of 200 TPH Travelling Grate Boiler</TD>
-</Tr>
-<Tr>
-<Td WIDTH="50">10.</TD>
-<Td WIDTH="300">Dhruvdesh Metasteels, Karnataka</TD>
-<Td WIDTH="600">Boiler Erection</TD>
-</Tr>
-<Tr>
-<Td WIDTH="50">11.</TD>
-<Td WIDTH="300">Haryana Co-op Sugar, Rohtak</TD>
-<Td WIDTH="600">Boiler Retrofit and Resolution of Operation Problems</TD>
-</Tr>
-<Tr>
-<Td WIDTH="50">12.</TD>
-<Td WIDTH="300">Dangote Sugar Refinery, Nigeria</TD>
-<Td WIDTH="600">Chemical Cleaning, Operational Troubleshooting of 6 X 90 TPH Gas fired Boilers</TD>
-</Tr>
-<Tr>
-<Td WIDTH="50">13.</TD>
-<Td WIDTH="300">Shah Sponge, Tatanagar</TD>
-<Td WIDTH="600">Boiler Erection</TD>
-</Tr>
-<Tr>
-<Td WIDTH="50">14.</TD>
-<Td WIDTH="300">JITF Epolis, Okhla, New Delhi</TD>
-<Td WIDTH="600">Commissioning and Annual Plant Maintenance Contract of 20 MW MSW Plant</TD>
-</Tr>
-<Tr>
-<Td WIDTH="50">15.</TD>
-<Td WIDTH="300">Kushaahn Energy</TD>
-<Td WIDTH="600">Resolving Operational Problems of 25 MW TG Boiler</TD>
+<Td WIDTH="300">Manufacturing of Boiler Components and Supply of Spare Parts</TD>
+<Td WIDTH="600">M/s Alstom India, Bajaj Hindustan, Bajaj Energy, Birla SUgar, Gemco Controls Limited, Himalaya Sugar Mills,
+ Upper Ganges Sugars & Industries, Uttam Sucrotech International</TD>
+
 </Tr>
 </tbody>
 </table>

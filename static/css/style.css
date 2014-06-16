@@ -2621,6 +2621,10 @@ label{
     width: 100px;
     text-align: center;
 }
+.table-mishan .col-comptype{
+    background: #f7d514;
+    text-align: left;
+}
 
 .table-mishan tr td, .table-mishan tr th {
     padding: 1px 5px;
