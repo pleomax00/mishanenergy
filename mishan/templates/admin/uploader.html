@@ -1,0 +1,36 @@
+{% extends 'admin/master.html' %}
+
+{% block main %}
+    {% ifequal request.GET.error 'allfieldsreq' %}<p class='error'>All fields are required</p>{% endifequal %}
+    {% ifequal request.GET.error 'nofiles' %}<p class='error'>Provide file to upload</p>{% endifequal %}
+    {% ifequal request.GET.error 'exists' %}<p class='error'>File with same name exists</p>{% endifequal %}
+
+    {% ifequal request.GET.msg 'success' %} <p class="success">Successfully uploaded the file, Visit documents page to see the uploaded file.. </p> {% endifequal %}
+    <h2> Change Password </h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" name="type" value="DOCUMENT" />
+        <table>
+            <tr>
+                <td>File</td>
+                <td><input type="file" name="ifile"" /></td>
+            </tr>
+            <tr>
+                <!--td>Type</td>
+                <td>
+                    <select name="type">
+                        <option value="DOCUMENT">Document</option>
+                        <option value="IMAGE">Image</option>
+                    </select>
+                </td-->
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><textarea name="description"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Upload" /></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

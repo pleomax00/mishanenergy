@@ -9,7 +9,7 @@ from django.conf import settings
 from django.forms.extras.widgets import SelectDateWidget
 import xmlrpclib, os
 from mishan.energy.models import *
-import hashlib
+import hashlib, shutil
 from django.contrib.auth import authenticate, login as djangologin, logout as djangologout, get_backends
 
 class NewsForm (forms.Form):
@@ -119,6 +119,37 @@ def deletemail (request, iid):
 
     u.delete()
     return HttpResponseRedirect ('/admin/createmail?msg=deleted&email=' + email)
+
+@login_required
+def uploader (request):
+    """ Uploader """
+    title = "Upload Files and Images"
+    if request.method == "POST":
+        print request.FILES
+        if len (request.FILES) == 0:
+            return HttpResponseRedirect ('/admin/files?error=nofiles')
+        filetype = request.POST.get ('type', '')
+        description = request.POST.get ('description', '')
+
+        if filetype == "" or description == "":
+            return HttpResponseRedirect ('/admin/files?error=allfieldsreq')
+
+        for key in request.FILES:
+            ofile = request.FILES[key]
+            up = UploadFile (filename = ofile.name, description = description, filetype = filetype)
+            filepath = os.path.join (settings.PATH_ROOT, "static", "uploads", ofile.name)
+            try:
+                file (filepath)
+                return HttpResponseRedirect ('/admin/files?error=exists')
+            except IOError:
+                pass
+            wfile = file (filepath, "wb+")
+            shutil.copyfileobj (ofile, wfile)
+            up.save ()
+
+        return HttpResponseRedirect ('/admin/files?msg=success')
+
+    return render_to_response ("admin/uploader.html", locals())
 
 @login_required
 def blockuser (request):

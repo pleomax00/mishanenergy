@@ -1,0 +1,44 @@
+{% extends 'master.html' %}
+{% load core_tags %}
+
+{% block title %}{{title}}{% endblock %}
+
+
+{% block maincontents %}
+        <!-- BEGIN OF HEADER IMAGE -->
+        <div id="headerimage-container">
+            <div id="headerimage-top"></div>
+            <div id="headerimage">
+                <div class="headerimage-dot"></div>
+                <img src="/static/images/{{image}}.jpg" alt="" /> 
+            </div>
+            <div id="headerimage-bottom"></div>
+        </div>
+        <!-- END OF HEADER IMAGE -->
+
+        <!-- BEGIN OF CONTENT -->
+        <div id="content">
+        	<div class="maincontent-inner">
+            	
+                <!-- begin of pagetitle --> 
+                <div class="pagetitle">
+                	<h1>Important Documents</h1>
+                </div>
+                <!-- end of front slogan --> 
+
+                <div class="col-1">
+                    <ul>
+                        {% for d in docs %}
+                        <li>
+                            <a href="/static/uploads/{{d.filename}}">{{d.filename}}</a>
+                            <p>{{d.description}}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- END OF CONTENT -->
+{% endblock %}

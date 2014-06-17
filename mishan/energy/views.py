@@ -63,10 +63,7 @@ def genericpage (request, page):
     titlename = page+"_h2"
     titledesc = page+"_minidesc"
     pagetext = page+"_text"
-    if(page == "documents" ):
-        image = "portfolio_head"
-    else:
-        image = page+"_head"
+    image = page+"_head"
     return render_to_response ( "genericpage.html", locals() )
 
 def labourlicense (request, page):
@@ -77,6 +74,19 @@ def labourlicense (request, page):
     pagetext = page+"_text"
     image = "portfolio_head"
     return render_to_response ( "labourlicense.html", locals() )
+
+
+def documents (request, page):
+    """ Serves a generic page """
+    title = page.capitalize ()
+    titlename = page+"_h2"
+    titledesc = page+"_minidesc"
+    pagetext = page+"_text"
+    image = "portfolio_head"
+    docs = UploadFile.objects.all ()
+    print docs
+    return render_to_response ( "documents.html", locals() )
+
 
 
 def careers (request):
