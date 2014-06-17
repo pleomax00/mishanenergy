@@ -120,6 +120,7 @@ def deletemail (request, iid):
     u.delete()
     return HttpResponseRedirect ('/admin/createmail?msg=deleted&email=' + email)
 
+@login_required
 def blockuser (request):
     """ Block a user """
     title = "Block User"
