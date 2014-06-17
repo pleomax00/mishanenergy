@@ -1,0 +1,100 @@
+{% extends 'master.html' %}
+{% load core_tags %}
+
+{% block title %}Services{% endblock %}
+
+{% block extraincludes %}
+<script type="text/javascript">
+   $(function(){
+		 //Tab jquery
+		 $(".tab_content").hide(); 
+		 $("ul.tabs li:first").addClass("active").show(); 
+		 $(".tab_content:first").show(); 
+		 $("ul.tabs li").click(function() {
+			  $("ul.tabs li").removeClass("active");
+		 	  $(this).addClass("active"); 
+			  $(".tab_content").hide(); 
+			  var activeTab = $(this).find("a").attr("href"); 
+			  $(activeTab).fadeIn(); 
+			  return false;
+		 });
+     });	
+</script>
+{% endblock %}
+
+{% block maincontents %}
+        <!-- BEGIN OF HEADER IMAGE -->
+        <div id="headerimage-container">
+            <div id="headerimage-top"></div>
+            <div id="headerimage">
+                <div class="headerimage-dot"></div>
+                <img src="/static/images/page-title2.jpg" alt="" /> 
+            </div>
+            <div id="headerimage-bottom"></div>
+        </div>
+        <!-- END OF HEADER IMAGE -->
+
+        <!-- BEGIN OF CONTENT -->
+        <div id="content">
+        	<div class="maincontent-inner">
+            	
+                <!-- begin of pagetitle --> 
+                <div class="pagetitle">
+                	<h1>{{"manufacturinghead"|snippet}}</h1>
+                	<h6>{{"manufacturing_desc"|snippet}}</h6>
+                </div>
+                <!-- end of front slogan --> 
+                
+                <div class="col-1">
+                    <p class="highlighttext">{{"manufacturing_text"|snippet}}</p>
+                    <div class="services-content">
+                    	<div class="serv-title">
+                        	<h5>{{"manufacturingtopic1"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                            <img src="/static/images/mr1.png" class="imgleft" />
+                        	<p>{{"manufacturingtopic1desc"|snippet}}</p>
+                        </div>
+                    </div>
+                    <div class="services-content-last">
+                    	<div class="serv-title">
+                        	<h5>{{"manufacturingtopic2"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                            <!-- <img src="/static/images/mr2.png" class="imgleft" /> -->
+                        	<p>{{"manufacturingtopic2desc"|snippet}}</p>
+                        </div>
+                    </div>
+                    <div class="services-content">
+                    	<div class="serv-title">
+                        	<h5>{{"manufacturingtopic3"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                            <img src="/static/images/mr3.png" class="imgleft" />
+                        	<p>{{"manufacturingtopic3desc"|snippet}}</p>
+                        </div>
+                    </div>
+                    <div class="services-content-last">
+                    	<div class="serv-title">
+                        	<h5>{{"manufacturingtopic4"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                            <img src="/static/images/mr4.png" class="imgleft" />
+                        	<p>{{"manufacturingtopic4desc"|snippet}}</p>
+                        </div>
+                    </div>
+                    <div class="services-content">
+                    	<div class="serv-title">
+                        	<h5>{{"manufacturingtopic5"|snippet}}</h5>
+                        </div>
+                        <div class="serv-desc">
+                            <img src="/static/images/mr5.png" class="imgleft" />
+                        	<p>{{"manufacturingtopic5desc"|snippet}}</p>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- END OF CONTENT -->
+{% endblock %}
