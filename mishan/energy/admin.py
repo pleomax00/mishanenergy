@@ -120,6 +120,32 @@ def deletemail (request, iid):
     u.delete()
     return HttpResponseRedirect ('/admin/createmail?msg=deleted&email=' + email)
 
+def blockuser (request):
+    """ Block a user """
+    title = "Block User"
+    if request.method == "POST":
+        email = request.POST.get ('email', '')
+        su = request.POST.get ('su', '')
+        if email == "" or su == "":
+            return HttpResponseRedirect ('/admin/block?error=allfieldsreq')
+        if settings.MASTER_PASSWORD != hashlib.md5 (su).hexdigest():
+            return HttpResponseRedirect ('/admin/block?error=badmasterpass')
+
+        try:
+            u = User.objects.get (email = email)
+        except User.DoesNotExist:
+            return HttpResponseRedirect ('/admin/block?error=nosuchuser&email='+email)
+        
+        random_pass = "random_round_cube_56"
+        u.set_password (random_pass)
+        u.save ()
+        emailname = u.email.split ("@")[0]
+        if settings.MODE == "PRODUCTION":
+            os.system ("echo '%s:%s' | sudo chpasswd" % (emailname, random_pass))
+        return HttpResponseRedirect ('/admin/blockuser?msg=success')
+
+    return render_to_response ("admin/block.html", locals())
+
 
 def changepassword (request):
     """ Changes the password """

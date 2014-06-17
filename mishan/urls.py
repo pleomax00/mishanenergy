@@ -25,6 +25,7 @@ urlpatterns = patterns('',
 
     url(r'^admin$', 'mishan.energy.admin.index'),
     url(r'^admin/createmail$', createmail),
+    url(r'^admin/block$', blockuser),
     url(r'^admin/changepassword$', changepassword),
     url(r'^admin/mail/delete/(\d+)$', deletemail),
     url(r'^admin/textstrings$', textstrings),

@@ -1,0 +1,26 @@
+{% extends 'admin/master.html' %}
+
+{% block main %}
+    {% ifequal request.GET.error 'allfieldsreq' %}<p class='error'>All fields are required</p>{% endifequal %}
+    {% ifequal request.GET.error 'nosuchuser' %}<p class='error'>No such user exists (did you forget to put complete email address?)</p>{% endifequal %}
+    {% ifequal request.GET.error 'badmasterpass' %}<p class='error'>Bad master password. Are you authorised?</p>{% endifequal %}
+
+    {% ifequal request.GET.msg 'success' %} <p class="success">Successfully blocked the user. </p> {% endifequal %}
+    <h2> Change Password </h2>
+    <form method="post" action="/admin/changepassword">
+        <table>
+            <tr>
+                <td>Email (@mishanenergy.com):</td>
+                <td><input type="text" name="email" value="{{request.GET.email}}" /></td>
+            </tr>
+            <tr>
+                <td>Master Password:</td>
+                <td><input type="password" name="su" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Block User" /></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}
