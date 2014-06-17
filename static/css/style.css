@@ -503,11 +503,11 @@ p#vtip{
 }
 #slideshow-container{
 	width:1090px;	
-	margin:30px auto 48px auto;
+	margin:80px auto 48px auto;
 }
 #headerimage-container{
 	width:1090px;	
-	margin:48px auto 0px auto;
+	margin:80px auto 0px auto;
 }
 #slide-top, #headerimage-top{
 	width:1090px;
@@ -551,22 +551,36 @@ p#vtip{
 
 /* HEADER
 ------------------------------------------------------*/
-#logo{
+.logo1{
 	width:173px;
 	margin:0px 0px 0px 58px;	
 	position:absolute;
 	z-index:110;
 }
+.logo2{
+	width: 283px;
+	margin: 0px 0px 0px 793px;
+	position:absolute;
+	z-index:110;
+	background-image:url(../images/bg-top-slide-inv.png);
+    background-position: 0px 0px;
+    height: 99px;
+    padding-left: 65px;
+    
+}
+
 #righttop-header{
 	width:711px;
-	float:right;
+    position: absolute;
+    top: 14px;
 }
 #top-information{
 	width:711px;
 	text-align:right;
-	margin-top:-38px;
 	position:absolute;
 	z-index:110;
+    top: -17px;
+    left: 430px;
 }
 #top-information p{
 	font-size:11px;
@@ -578,7 +592,6 @@ p#vtip{
 	margin:0px auto;
 }
 #headerimage img{
-	margin-top:-110px;
 }
 .headerimage-dot{
 	width:1090px;
@@ -607,9 +620,7 @@ p#vtip{
 /* MAINMENU
 ------------------------------------------------------*/
 #mainmenu{
-	width:760px;
-	margin:34px 0px 0px 0px;
-	float:right;
+	width:1088px;
 }
 #mainmenu ul{
 	font-family:'calibri',Arial,Tahoma,Verdana;
@@ -620,12 +631,7 @@ p#vtip{
 	padding:4px 80px 4px 15px;
 	background-image:url(../images/bg-tranparent.png);
 	background-repeat:repeat;
-	-webkit-border-top-left-radius: 14px;
-	-webkit-border-bottom-left-radius: 14px;
-	-moz-border-radius-topleft: 14px;
-	-moz-border-radius-bottomleft: 14px;
-	border-top-left-radius: 14px;
-	border-bottom-left-radius: 14px;
+    border-radius: 14px;
 	z-index:150; 
 	position:relative; 
 	float:right;
@@ -707,7 +713,7 @@ p#vtip{
 #slider {
 	width:1090px;
 	height:535px;
-	margin-top:-110px;
+	margin-top:0px;
 	margin-bottom:-121px;
 	background:#ccc;
 	float:left;
