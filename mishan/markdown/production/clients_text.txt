@@ -12,7 +12,7 @@
         <tbody>
 			<tr>
                 <td class="col-comptype"></td>
-				<td class="col-comptype">Domestic</td>
+				<td class="col-comptype"><b>Domestic</b></td>
                 </tr>
             <tr>
                 <td class="col1">1.</td>
@@ -112,7 +112,7 @@
             </tr>
 			<tr>
                 <td class="col-comptype"></td>
-				<td class="col-comptype">Export</td>
+				<td class="col-comptype"><b>Export</b></td>
                 </tr>
             <tr>
                 <td class="col1">1.</td>

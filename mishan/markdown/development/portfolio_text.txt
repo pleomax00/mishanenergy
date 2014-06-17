@@ -11,38 +11,37 @@
 <tbody>
 <Tr>
 <Td WIDTH="50">1.</TD>
-<Td WIDTH="300">Modification of CFBC Boiler for Multi Bio-Mass Fuel & RDF</TD>
+<Td WIDTH="300"><b>Modification of CFBC Boiler for Multi Bio-Mass Fuel & RDF</b></TD>
 <Td WIDTH="600">M/s A2Z Maintenance & Engineering Services - Nakodar & Fazilka, A2Z Infrastructure Limited - Kanpur</TD>
 </Tr>
 <Tr>
 <Td WIDTH="50">2.</TD>
-<Td WIDTH="300">Capacity Enhancement of Boiler</TD>
+<Td WIDTH="300"><b>Capacity Enhancement of Boiler</b></TD>
 <Td WIDTH="600">M/s Balrampur Chinni Mills, Bajaj Hindustan Limited - Utraula & Gola, Triveni Engineering & Industries Limited - Sabitgarh,
 Upper Ganges Sugar & Industries Ltd - Seohara, Wave Industries Pvt Ltd - Amroha</TD>
 </Tr>
 <Tr>
 <Td WIDTH="50">3.</TD>
-<Td WIDTH="300">Conversion of Travelling Grate Boiler to ABFC type Boiler</TD>
+<Td WIDTH="300"><b>Conversion of Travelling Grate Boiler to ABFC type Boiler</b></TD>
 <Td WIDTH="600">M/s A.B. Sugars Limited - Dasuya</TD>
 </Tr>
 <Tr>
 <Td WIDTH="50">4.</TD>
-<Td WIDTH="300">Efficiency Improvement & Retrofitting</TD>
+<Td WIDTH="300"><b>Efficiency Improvement & Retrofitting</b></TD>
 <Td WIDTH="600">M/s Dangote Sugar Refinery - Nigeria, Grasim Bhiwani Textile Limited, PBS Foods (Sugar) Pvt Ltd - Chandpur, Sharaung Sugar Co Ltd - Thailand, 
  Wave Industries Pvt Ltd - Dhanaura</TD>
 </Tr>
 <Tr>
 <Td WIDTH="50">5.</TD>
-<Td WIDTH="300">Operation & Maintenance of Power Plants</TD>
+<Td WIDTH="300"><b>Operation & Maintenance of Power Plants</b></TD>
 <Td WIDTH="600">M/s Associated Cement Companies Ltd - Barmana, GLobus Spirits Limited - Behrur, JITF Ecopolis, KIC Durgapur, L&T MHI Boiler, 
 Shri Chamundi Captive Energy Pvt Ltd</TD>
 </Tr>
 <Tr>
 <Td WIDTH="50">6.</TD>
-<Td WIDTH="300">Manufacturing of Boiler Components and Supply of Spare Parts</TD>
+<Td WIDTH="300"><b>Manufacturing of Boiler Components and Supply of Spare Parts</b></TD>
 <Td WIDTH="600">M/s Alstom India, Bajaj Hindustan, Bajaj Energy, Birla SUgar, Gemco Controls Limited, Himalaya Sugar Mills,
  Upper Ganges Sugars & Industries, Uttam Sucrotech International</TD>
-
 </Tr>
 </tbody>
 </table>

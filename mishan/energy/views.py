@@ -42,6 +42,10 @@ def services (request):
     """ Serves /services of the site """
     return render_to_response ( "services.html", locals() )
 
+def manufacturing (request):
+    """ Serves /services of the site """
+    return render_to_response ( "manufacturing.html", locals() )
+
 def contact (request):
     """ Serves /contact of the site """
     if request.method == "POST":
