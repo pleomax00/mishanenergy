@@ -143,7 +143,7 @@ def blockuser (request):
         emailname = u.email.split ("@")[0]
         if settings.MODE == "PRODUCTION":
             os.system ("echo '%s:%s' | sudo chpasswd" % (emailname, random_pass))
-        return HttpResponseRedirect ('/admin/blockuser?msg=success')
+        return HttpResponseRedirect ('/admin/block?msg=success')
 
     return render_to_response ("admin/block.html", locals())
 
