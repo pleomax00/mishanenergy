@@ -23,7 +23,8 @@
                 </div>
                 <ul class="team-list">
                     {% for val in board %}
-                    <li><a href='/about/board/{{val.0}}'><img src="/static/images/directors/{{val.0}}.jpg" alt="{{val.1}}" class="imgborder" /><p>{{val.1}}</p></a></li>
+                    <!-- <li><a href='/about/board/{{val.0}}'><img src="/static/images/directors/{{val.0}}.jpg" alt="{{val.1}}" class="imgborder" /><p>{{val.1}}</p></a></li> -->
+                    <li><a href='/about/board/{{val.0}}'><p>{{val.1}}</p></a></li>
                     {% endfor %}
                     <!--li class="team-last"><img src="/static/images/team4.jpg" alt="" class="imgborder" /><p>Ken Arok</p></li-->
                 </ul>
