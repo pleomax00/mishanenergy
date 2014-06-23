@@ -1,6 +1,7 @@
 {% extends 'admin/master.html' %}
 
 {% block main %}
+    {% ifequal request.GET.error 'permission' %}<p class='error'>You don't have permission to view this page.</p>{% endifequal %}
     <ul class="normalul">
         <li><a href='/admin/createmail'>Create/Edit User</a></li>
         <li><a href='/admin/changepassword'>Change Password</a></li>

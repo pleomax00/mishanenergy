@@ -88,7 +88,6 @@ def documents (request, page):
     pagetext = page+"_text"
     image = "portfolio_head"
     docs = UploadFile.objects.all ()
-    print docs
     return render_to_response ( "documents.html", locals() )
 
 

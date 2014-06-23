@@ -6,13 +6,26 @@
     {% ifequal request.GET.error 'exists' %}<p class='error'>File with same name exists</p>{% endifequal %}
 
     {% ifequal request.GET.msg 'success' %} <p class="success">Successfully uploaded the file, Visit documents page to see the uploaded file.. </p> {% endifequal %}
-    <h2> Change Password </h2>
+    {% ifequal request.GET.msg 'removed' %} <p class="success">Successfully removed the file. </p> {% endifequal %}
+    <ul>
+    <h2>Uploaded Files</h2>
+    {% for f in filelist %}
+        <li>{{f.filename}} (<a href="/admin/removefile?id={{f.id}}">remove</a>)</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Upload a new file</h2>
     <form method="post" enctype="multipart/form-data">
         <input type="hidden" name="type" value="DOCUMENT" />
         <table>
             <tr>
                 <td>File</td>
-                <td><input type="file" name="ifile"" /></td>
+                <td><input type="file" name="ifile_1" /></br/>
+                    <input type="file" name="ifile_2" /><br/>
+                    <input type="file" name="ifile_3" /><br/>
+                    <input type="file" name="ifile_4" /><br/>
+                    <input type="file" name="ifile_5" /><br/>
+                </td>
             </tr>
             <tr>
                 <!--td>Type</td>

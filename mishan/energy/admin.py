@@ -121,11 +121,28 @@ def deletemail (request, iid):
     return HttpResponseRedirect ('/admin/createmail?msg=deleted&email=' + email)
 
 @login_required
+def removefile (request):
+    try:
+        fileobj = UploadFile.objects.get (id = request.GET.get ("id", ""))
+    except UploadFile.DoesNotExist:
+        raise Http404
+    filepath = os.path.join (settings.PATH_ROOT, "static", "uploads", fileobj.filename)
+    try:
+        os.unlink (filepath)
+    except OSError:
+        pass
+    fileobj.delete ()
+    return HttpResponseRedirect ('/admin/files?msg=removed')
+
+
+@login_required
 def uploader (request):
     """ Uploader """
-    title = "Upload Files and Images"
+    if request.user.email not in settings.LINE_MANAGERS:
+        return HttpResponseRedirect ("/admin?error=permission")
+    title = "Upload Files"
+    filelist = UploadFile.objects.all ()
     if request.method == "POST":
-        print request.FILES
         if len (request.FILES) == 0:
             return HttpResponseRedirect ('/admin/files?error=nofiles')
         filetype = request.POST.get ('type', '')
@@ -272,15 +289,12 @@ def loginpage (request):
     if request.method == "POST":
         login = request.POST.get ("login", "")
         password = request.POST.get ("password", "")
-        print login, password
         if login == "" or password == "":
             return HttpResponseRedirect ("/auth/login?error=allfields&next=" + request.POST.get('next','/admin'))
         user = authenticate ( username = login, password = password )
-        print user
         if user is not None:
             djangologin (request, user)
             return HttpResponseRedirect (request.GET.get ("next", "/admin"))
-        print user
     return render_to_response ("admin/login.html", locals())
 
 
