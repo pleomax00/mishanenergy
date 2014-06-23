@@ -1,7 +1,7 @@
 # Django settings for mishan project.
 import os
 
-MODE = os.getenv ( "MODE", "PRODUCTION" )
+MODE = os.getenv ( "MODE", "DEVELOPMENT" )
 
 if MODE == "DEVELOPMENT":
     DEBUG = True
@@ -19,7 +19,7 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-LINE_MANAGERS = ["pleomax00@gmail.com", "nimisha.sri1@gmail.com", "anjanikumar@mishanenergy.com"]
+LINE_MANAGERS = ["pleomax00@gmail.com", "nimisha.sri1@gmail.com", "anjanikumar@mishanenergy.com", "nsrivastava@mishanenergy.com", "jitendra@mishanenergy.com", "ubuntu@mishanenergy.com"]
 
 if MODE == "PRODUCTION":
     DATABASES = {
