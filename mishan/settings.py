@@ -1,7 +1,7 @@
 # Django settings for mishan project.
 import os
 
-MODE = os.getenv ( "MODE", "DEVELOPMENT" )
+MODE = os.getenv ( "MODE", "PRODUCTION" )
 
 if MODE == "DEVELOPMENT":
     DEBUG = True
