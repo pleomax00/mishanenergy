@@ -1,4 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/python
+import os, sys
+
+# Thirdparty modules goes into lib, lets add it to path.
+dirname, filename = os.path.split (os.path.abspath (__file__))
+dirname, filename = os.path.split (dirname)
+sys.path.append (dirname)
+
 from django.core.management import execute_manager
 import imp
 try:
