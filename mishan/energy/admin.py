@@ -148,7 +148,7 @@ def uploader (request):
         filetype = request.POST.get ('type', '')
         description = request.POST.get ('description', '')
 
-        if filetype == "" or description == "":
+        if filetype == "":
             return HttpResponseRedirect ('/admin/files?error=allfieldsreq')
 
         for key in request.FILES:
