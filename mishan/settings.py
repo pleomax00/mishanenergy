@@ -15,11 +15,11 @@ else:
     PATH_ROOT = os.getcwd()
 
 ADMINS = (
-    ('Shamail Tayyab', 'me@shamail.in'),
+    ('Shamail Tayyab', 'shamail@yahoo.com'),
 )
 
 MANAGERS = ADMINS
-LINE_MANAGERS = ["pleomax00@gmail.com", "nimisha.sri1@gmail.com", "anjanikumar@mishanenergy.com", "nsrivastava@mishanenergy.com", "jitendra@mishanenergy.com", "ubuntu@mishanenergy.com"]
+LINE_MANAGERS = ["shamail@yahoo.com", "nimisha.sri1@gmail.com", "anjanikumar@mishanenergy.com", "nsrivastava@mishanenergy.com", "jitendra@mishanenergy.com", "ubuntu@mishanenergy.com"]
 
 if MODE == "PRODUCTION":
     DATABASES = {
