@@ -35,7 +35,9 @@ def board (request, member = ""):
     """ Serves a member's page """
     board = get_board (True)
     dictboard = get_board ()
-    membername = dictboard[member]
+    membername = dictboard.get (member, None)
+    if membername is None:
+       raise Http404
     return render_to_response ( "board.html", locals() )
 
 def services (request):
