@@ -19,7 +19,7 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-LINE_MANAGERS = ["shamail@yahoo.com", "nimisha.sri1@gmail.com", "anjanikumar@mishanenergy.com", "nsrivastava@mishanenergy.com", "jitendra@mishanenergy.com", "ubuntu@mishanenergy.com"]
+LINE_MANAGERS = ["shamail@yahoo.com", "nimisha.sri1@gmail.com", "anjanikumar@mishanenergy.com", "nsrivastava@mishanenergy.com", "swapnil@mishanenergy.com"]
 
 if MODE == "PRODUCTION":
     DATABASES = {
