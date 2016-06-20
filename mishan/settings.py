@@ -208,10 +208,10 @@ EMAIL_REGEX = "[a-zA-Z0-9._%-]+@[a-zA-Z0-9._%-]+.[a-zA-Z]{2,6}"
 
 MARK_DOWN = os.path.join ( PATH_ROOT, "mishan", "markdown", MODE.lower() )
 
-AWS_ACCESS_KEY_ID = 'AKIAJ22E4TFT7SLCM5DA'
-AWS_SECRET_ACCESS_KEY = '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'
-S3_KEY = 'AKIAJ22E4TFT7SLCM5DA'
-S3_SECRET = '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'
+AWS_ACCESS_KEY_ID = file ("/home/ubuntu/.s3.key").read ().split (":")[0].strip()
+AWS_SECRET_ACCESS_KEY = file ("/home/ubuntu/.s3.key").read ().split (":")[1].strip()
+S3_KEY = AWS_ACCESS_KEY_ID
+S3_SECRET = AWS_SECRET_ACCESS_KEY
 
 REDIRECTION_RULES = [ ('mishanenergy.com'), 'www.mishanenergy.com' ]
 
