@@ -172,7 +172,7 @@ def autocomplete_post (request):
 
 @login_required
 def uploadmedia (request):
-    host = request.META.get ( "HTTP_HOST", "tunesdiary.com" )
+    host = request.META.get ( "HTTP_HOST", "mishanenergy.com" )
     links = []
     if request.method == "POST":
         for i in request.FILES:

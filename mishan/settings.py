@@ -12,14 +12,15 @@ FORCE_SCRIPT_NAME = ""
 if MODE == "PRODUCTION":
     PATH_ROOT = "/home/ubuntu/install/mishan"
 else:
-    PATH_ROOT = os.getcwd()
+    PATH_ROOT = "/home/ubuntu/install/mishan"
+    #PATH_ROOT = os.getcwd()
 
 ADMINS = (
-    ('Shamail Tayyab', 'shamail@yahoo.com'),
+    ('Nimisha Srivastava', 'nsrivastava@mishanenergy.com'),
 )
 
 MANAGERS = ADMINS
-LINE_MANAGERS = ["shamail@yahoo.com", "nimisha.sri1@gmail.com", "anjanikumar@mishanenergy.com", "nsrivastava@mishanenergy.com", "swapnil@mishanenergy.com"]
+LINE_MANAGERS = [ "nimisha.sri1@gmail.com", "anjanikumar@mishanenergy.com", "nsrivastava@mishanenergy.com", "swapnil@mishanenergy.com"]
 
 if MODE == "PRODUCTION":
     DATABASES = {
@@ -42,7 +43,7 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
             'NAME': 'mishan',                      # Or path to database file if using sqlite3.
-            'USER': 'shamail',                      # Not used with sqlite3.
+            'USER': 'ubuntu',                      # Not used with sqlite3.
             'PASSWORD': '',                  # Not used with sqlite3.
             'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
             'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
@@ -194,33 +195,28 @@ SERVICES = (
     ("seo", "Search Engine Optimization"),
 )
 
-EMAIL_HOST = "localhost"
-EMAIL_PORT = 25
-EMAIL_HOST_USER = "support@mishanenergy.com"
 SERVER_EMAIL = "support@mishanenergy.com"
 
-if MODE == "DEVELOPMENT":
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-else:
-    EMAIL_HOST = "email-smtp.us-east-1.amazonaws.com"
-    EMAIL_HOST_USER = "AKIAI5YJ46G24MRR2RYA"
-    EMAIL_HOST_PASSWORD = "AlWw9h9rbL6qQJB+lhbrXaZovBaiIwh2GidUaLfyLjV2"
-    EMAIL_USE_TLS = True
+EMAIL_HOST = "email-smtp.us-east-1.amazonaws.com"
+EMAIL_PORT = 25
+EMAIL_HOST_USER = "AKIAI5YJ46G24MRR2RYA"
+EMAIL_HOST_PASSWORD = "AlWw9h9rbL6qQJB+lhbrXaZovBaiIwh2GidUaLfyLjV2"
+EMAIL_USE_TLS = True
 
 LOGIN_URL = "/auth/login"
 EMAIL_REGEX = "[a-zA-Z0-9._%-]+@[a-zA-Z0-9._%-]+.[a-zA-Z]{2,6}"
 
 MARK_DOWN = os.path.join ( PATH_ROOT, "mishan", "markdown", MODE.lower() )
 
-AWS_ACCESS_KEY_ID = 'AKIAJB3GGH5XSBCGAZ4Q'
-AWS_SECRET_ACCESS_KEY = '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'
-S3_KEY = 'AKIAJB3GGH5XSBCGAZ4Q'
-S3_SECRET = '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'
+AWS_ACCESS_KEY_ID = 'AKIAJ22E4TFT7SLCM5DA'
+AWS_SECRET_ACCESS_KEY = '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'
+S3_KEY = 'AKIAJ22E4TFT7SLCM5DA'
+S3_SECRET = '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'
 
 REDIRECTION_RULES = [ ('mishanenergy.com'), 'www.mishanenergy.com' ]
 
-WEBFACTION_USER = 'tunesdiary'
-WEBFACTION_PASSWORD = 'webfactioni586'
+#WEBFACTION_USER = 'tunesdiary'
+#WEBFACTION_PASSWORD = 'webfactioni586'
 
 MASTER_PASSWORD = "0bf6dbeb97b5572136feea58455e5733" #ss
 
